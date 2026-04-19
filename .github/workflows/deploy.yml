@@ -1,8 +1,11 @@
-name: Deploy Jekyll site
+name: deploy
 
 on:
   push:
     branches: ["main"]
+
+permissions:
+  contents: write
 
 jobs:
   build-deploy:
@@ -25,5 +28,5 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
-          publish_dir: ./_site
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
