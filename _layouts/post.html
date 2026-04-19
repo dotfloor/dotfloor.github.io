@@ -9,6 +9,21 @@ layout: default
   
   <h1>{{ page.title }}</h1>
 
+  <button class="btn-toggle" id="furigana-toggle" onclick="toggleFurigana()" style="align-self: flex-start;">ふりがな: オン</button>
+  <script>
+    function toggleFurigana() {
+      const isHidden = document.body.classList.toggle('hide-furigana');
+      const btn = document.getElementById('furigana-toggle');
+      btn.innerText = isHidden ? 'ふりがな: オフ' : 'ふりがな: オン';
+      localStorage.setItem('hide-furigana', isHidden);
+    }
+    // Restore preference on load
+    if (localStorage.getItem('hide-furigana') === 'true') {
+      document.body.classList.add('hide-furigana');
+      document.getElementById('furigana-toggle').innerText = 'ふりがな: オフ';
+    }
+  </script>
+
   {{ content }}
 
   {%- if page.comments != false -%}
