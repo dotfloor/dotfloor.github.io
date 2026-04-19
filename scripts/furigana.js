@@ -141,7 +141,7 @@ async function getVocabData(word) {
                     </div>`;
                 }
 
-                newVocabLists[i].innerHTML = newHtml;
+                newVocabLists[i].innerHTML = newHtml + '<div class="jisho-attribution">辞書データ提供：<a href="https://jisho.org" target="_blank">Jisho.org</a></div>';
                 changed = true;
             }
 

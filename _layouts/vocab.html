@@ -1,7 +1,7 @@
 ---
 layout: page
-title: VOCABULARY
 ---
+{{ content }}
 
 <div id="vocab-dashboard">
   <div class="dashboard-stats">
@@ -21,6 +21,8 @@ title: VOCABULARY
   <div id="vocab-results" class="vocab-list-container">
      <em>辞書データを読み込み中...</em>
   </div>
+  
+  <div class="jisho-attribution">辞書データ提供：<a href="https://jisho.org" target="_blank">Jisho.org</a></div>
 </div>
 
 <script>
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const filterHtml = Object.keys(jlptCounts).sort().map(level =>
         `<button class="btn-toggle filter-btn" data-level="${level}">${level}</button>`
     ).join(' ');
-    filtersDiv.innerHTML = `<button class="btn-toggle filter-btn active" data-level="ALL">すべて</button> ` + filterHtml;
+    filtersDiv.innerHTML = `<button class="btn-toggle filter-btn active" data-level="ALL">ALL</button> ` + filterHtml;
     
     // Re-render function
     function render() {

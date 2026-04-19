@@ -1,0 +1,4 @@
+---
+layout: vocab
+title: VOCABULARY
+---

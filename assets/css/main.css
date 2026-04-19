@@ -297,3 +297,16 @@ body.hide-furigana .vocab-list-container rt {
 .dict-posts summary:hover {
 	opacity: 1;
 }
+
+.jisho-attribution {
+	font-size: 0.8em;
+	color: dimgray;
+	text-align: right;
+	margin-top: 1rem;
+	opacity: 0.7;
+}
+
+.jisho-attribution a {
+	color: inherit;
+	text-decoration: underline;
+}
