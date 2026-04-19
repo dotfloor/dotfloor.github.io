@@ -64,6 +64,17 @@ body {
 	text-align: right;
 }
 
+.post-article {
+	display: flex;
+	flex-direction: column;
+	min-height: 70vh;
+}
+
+.post-comments {
+	margin-top: auto;
+	padding-top: 2rem;
+}
+
 h2,
 h3,
 h4,

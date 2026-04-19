@@ -4,7 +4,7 @@ layout: default
 
 {%-include back_link.html-%}
 
-<article>
+<article class="post-article">
   <p class="post-meta">
     <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
   </p>
@@ -12,4 +12,24 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   {{ content }}
+
+  {%- if page.comments != false -%}
+  <div class="post-comments">
+    <script src="https://giscus.app/client.js"
+            data-repo="dotfloor/dotfloor.github.io"
+            data-repo-id="R_kgDOSG-Ulw"
+            data-category="General"
+            data-category-id="DIC_kwDOSG-Ul84C7OEC"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="dark"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+  {%- endif -%}
 </article>
