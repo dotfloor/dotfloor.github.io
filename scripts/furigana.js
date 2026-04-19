@@ -67,6 +67,9 @@ async function getVocabData(word) {
         // Find all HTML files in the _site directory
         const files = glob.sync("_site/**/*.html");
         let processed = 0;
+        
+        // Master dictionary to power the Vocab Dashboard
+        const masterVocab = {};
 
         for (const file of files) {
             const filePath = path.resolve(file);
@@ -142,11 +145,41 @@ async function getVocabData(word) {
                 changed = true;
             }
 
+            // Dashboard Extractor: Map words to this particular post
+            if (vocabQueries.length > 0) {
+                const titleEl = document.querySelector('#post-title');
+                const postTitle = titleEl ? titleEl.textContent.trim() : "Untitled Post";
+                // URL relative to site root
+                let postUrl = '/' + path.relative('_site', file).replace(/\\/g, '/');
+
+                for (const query of vocabQueries) {
+                    for (const word of query) {
+                        const data = vocabCache[word];
+                        if (!data) continue;
+                        
+                        if (!masterVocab[word]) {
+                            masterVocab[word] = { jisho: data, posts: [] };
+                        }
+                        if (!masterVocab[word].posts.find(p => p.url === postUrl)) {
+                            masterVocab[word].posts.push({ title: postTitle, url: postUrl });
+                        }
+                    }
+                }
+            }
+            
             if (changed) {
                 fs.writeFileSync(filePath, dom.serialize(), "utf-8");
                 processed++;
             }
         }
+        
+        // Generate Vocab Dashboard JSON
+        if (!fs.existsSync("_site/assets")) {
+            fs.mkdirSync("_site/assets", { recursive: true });
+        }
+        fs.writeFileSync("_site/assets/vocab-data.json", JSON.stringify(masterVocab), "utf-8");
+        console.log(`[Furigana] Wrote global vocab data to /assets/vocab-data.json`);
+        
         console.log(`[Furigana] Successfully applied furigana to ${processed} files.`);
     } catch (e) {
         console.error("[Furigana] Error updating files:", e);

@@ -6,8 +6,11 @@ entries:
       show_more_text: すべて見る…
       show_more_url: archive.html
 
-  - title: この場所について
+  - title: ABOUT
     url: about.html
 
-  - title: 記録一覧
+  - title: ARCHIVE
     url: archive.html
+
+  - title: VOCAB
+    url: vocab.html
