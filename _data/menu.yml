@@ -11,6 +11,3 @@ entries:
 
   - title: 記録一覧
     url: archive.html
-
-  - title: RSS
-    url: feed.xml
