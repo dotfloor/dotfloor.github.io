@@ -5,9 +5,7 @@ layout: default
 {%-include back_link.html-%}
 
 <article class="post-article">
-  <p class="post-meta">
-    <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
-  </p>
+  <p class="post-meta" aria-hidden="true" data-post-date="{{ page.date | date: site.theme_config.date_format }}"></p>
   
   <h1>{{ page.title }}</h1>
 
