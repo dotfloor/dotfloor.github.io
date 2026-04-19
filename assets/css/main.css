@@ -64,6 +64,10 @@ body {
 	text-align: right;
 }
 
+.post-meta:before {
+	content: attr(data-post-date);
+}
+
 .post-article {
 	display: flex;
 	flex-direction: column;
