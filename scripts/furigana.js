@@ -158,7 +158,11 @@ async function getVocabData(word) {
                         if (!data) continue;
                         
                         if (!masterVocab[word]) {
-                            masterVocab[word] = { jisho: data, posts: [] };
+                            let romajiStr = "";
+                            if (data.reading) {
+                                romajiStr = await kuroshiro.convert(data.reading, { mode: "spaced", to: "romaji" });
+                            }
+                            masterVocab[word] = { jisho: data, posts: [], romaji: romajiStr };
                         }
                         if (!masterVocab[word].posts.find(p => p.url === postUrl)) {
                             masterVocab[word].posts.push({ title: postTitle, url: postUrl });

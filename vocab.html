@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vocabulary Dashboard
+title: VOCABULARY
 ---
 
 <div id="vocab-dashboard">
@@ -101,10 +101,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             
             const postsListHtml = entry.posts.map(p => `<li><a href="${p.url}">${p.title}</a></li>`).join("");
 
+            const wordHtml = jisho.reading ? `<ruby>${jisho.word || w}<rt>${jisho.reading}</rt></ruby>` : (jisho.word || w);
+            const romajiSpan = entry.romaji ? `<span class="dict-romaji">${entry.romaji}</span>` : '';
+
             return `
             <div class="dict-card interactive-card">
                 <div class="dict-header">
-                    <div class="dict-word">${w} <span class="dict-romaji">(${jisho.reading})</span></div>
+                    <div class="dict-word">${wordHtml}${romajiSpan}</div>
                     <div class="dict-tags">${jlptSpan}${commonSpan}</div>
                 </div>
                 <div class="dict-meanings">${meaningsHtml}</div>
