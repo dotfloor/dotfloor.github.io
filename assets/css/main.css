@@ -188,3 +188,61 @@ rt {
 body.hide-furigana rt {
 	display: none;
 }
+
+body.hide-furigana .vocab-list-container rt {
+	display: revert;
+}
+
+/* Dictionary Component */
+.vocab-list-container {
+	margin-top: 4rem;
+}
+
+.dict-card {
+	border: thin solid currentColor;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.dict-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	border-bottom: thin dashed currentColor;
+	padding-bottom: 0.5rem;
+}
+
+.dict-word {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.dict-romaji {
+	font-size: 0.7em;
+	opacity: 0.8;
+	margin-left: 0.5rem;
+	font-weight: normal;
+}
+
+.dict-tags {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.dict-tag {
+	font-size: 0.7em;
+	border: thin solid currentColor;
+	padding: 0.1rem 0.4rem;
+	text-transform: uppercase;
+}
+
+.dict-meanings {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	font-size: 0.9em;
+}
