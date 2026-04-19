@@ -53,8 +53,8 @@ html {
 body {
 	color: black;
 	font-family: monospace;
-	font-size: 16px;
-	line-height: 1.4;
+	font-size: clamp(18px, 2vw + 12px, 24px);
+	line-height: 1.6;
 	margin: 0;
 	min-height: 100%;
 	overflow-wrap: break-word;
@@ -160,4 +160,31 @@ img {
 	max-width: 100%;
 	display: block;
 	margin: 0 auto;
+}
+
+.btn-toggle {
+	font-family: inherit;
+	background: transparent;
+	border: thin solid currentColor;
+	color: inherit;
+	padding: 0.3rem 0.6rem;
+	cursor: pointer;
+	font-size: 0.85em;
+	margin-bottom: 1rem;
+	align-self: flex-start;
+	transition: opacity 0.2s;
+}
+
+.btn-toggle:hover {
+	opacity: 0.7;
+}
+
+/* Furigana specific styles */
+rt {
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+body.hide-furigana rt {
+	display: none;
 }
