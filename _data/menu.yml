@@ -1,0 +1,16 @@
+entries:
+  - title: 最近の記録
+    post_list:
+      limit: 5
+      show_more: true
+      show_more_text: すべて見る…
+      show_more_url: archive.html
+
+  - title: この場所について
+    url: about.html
+
+  - title: 記録一覧
+    url: archive.html
+
+  - title: RSS
+    url: feed.xml
