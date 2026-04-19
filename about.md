@@ -3,6 +3,8 @@ layout: page
 title: .floor
 ---
 
-This is a simple personal journal site.
+これは、私がまだ制御を及ぼしている数少ない場所の一つです。
 
-I use it to publish short daily notes and longer reflections.
+この記録（ジャーナル）がいつか唐突に終わらないことを願っています。
+
+それはただ一つのことを意味するからです。
