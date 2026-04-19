@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Vocabulary Dashboard</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Vocabulary Dashboard" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="終わりのないトンネル、出口に光はない。" />
+<meta property="og:description" content="終わりのないトンネル、出口に光はない。" />
+<link rel="canonical" href="/vocab" />
+<meta property="og:url" content="/vocab" />
+<meta property="og:site_name" content=".floor" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Vocabulary Dashboard" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"終わりのないトンネル、出口に光はない。","headline":"Vocabulary Dashboard","url":"/vocab"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title=".floor" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/assets/css/main.css" /></head>
+<body a="dark">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <a href="/">トップ</a><h1>Vocabulary Dashboard</h1>
+
+<div id="vocab-dashboard">
+  <div class="dashboard-stats">
+    <div class="stat-box"><strong>総単語数：</strong> <span id="stat-total">0</span></div>
+    <div id="stat-jlpt-breakdown"></div>
+  </div>
+  
+  <hr />
+
+  <div class="dashboard-controls">
+    <input type="text" id="vocab-search" placeholder="意味、漢字、読み方で検索..." autocomplete="off" />
+    <div id="jlpt-filters">
+        <!-- JS injected filters -->
+    </div>
+  </div>
+
+  <div id="vocab-results" class="vocab-list-container">
+     <em>辞書データを読み込み中...</em>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+    const resultsDiv = document.getElementById("vocab-results");
+    const searchInput = document.getElementById("vocab-search");
+    const filtersDiv = document.getElementById("jlpt-filters");
+    
+    let masterData = {};
+    let words = [];
+    let currentFilter = null;
+    
+    try {
+        const res = await fetch("/assets/vocab-data.json");
+        masterData = await res.json();
+        words = Object.keys(masterData);
+    } catch (e) {
+        resultsDiv.innerHTML = "<em>語彙データの読み込みに失敗しました。</em>";
+        return;
+    }
+    
+    // Compute stats
+    document.getElementById("stat-total").innerText = words.length;
+    
+    const jlptCounts = {};
+    words.forEach(w => {
+        const jlpt = masterData[w].jisho.jlpt;
+        if (jlpt && jlpt.length > 0) {
+            const level = jlpt[0].toUpperCase().replace('-', ' ');
+            jlptCounts[level] = (jlptCounts[level] || 0) + 1;
+        }
+    });
+    
+    const breakdownHtml = Object.keys(jlptCounts).sort().map(level => 
+        `<span class="dict-tag jlpt">${level}: ${jlptCounts[level]}</span>`
+    ).join(' ');
+    document.getElementById("stat-jlpt-breakdown").innerHTML = breakdownHtml;
+
+    // Filters
+    const filterHtml = Object.keys(jlptCounts).sort().map(level =>
+        `<button class="btn-toggle filter-btn" data-level="${level}">${level}</button>`
+    ).join(' ');
+    filtersDiv.innerHTML = `<button class="btn-toggle filter-btn active" data-level="ALL">すべて</button> ` + filterHtml;
+    
+    // Re-render function
+    function render() {
+        const query = searchInput.value.toLowerCase();
+        
+        const filteredWords = words.filter(w => {
+            const data = masterData[w];
+            const jisho = data.jisho;
+			
+            // Text Search
+            const searchableText = (w + " " + jisho.reading + " " + (jisho.romaji || "") + " " + jisho.meanings.join(" ")).toLowerCase();
+            if (query && !searchableText.includes(query)) return false;
+            
+            // JLPT Filter
+            if (currentFilter && currentFilter !== "ALL") {
+                if (!jisho.jlpt || jisho.jlpt.length === 0) return false;
+                if (jisho.jlpt[0].toUpperCase().replace('-', ' ') !== currentFilter) return false;
+            }
+            
+            return true;
+        });
+        
+        if (filteredWords.length === 0) {
+            resultsDiv.innerHTML = "<em>単語が見つかりませんでした。</em>";
+            return;
+        }
+
+        resultsDiv.innerHTML = filteredWords.map(w => {
+            const entry = masterData[w];
+            const jisho = entry.jisho;
+            
+            const jlptSpan = jisho.jlpt.length > 0 ? `<span class="dict-tag jlpt">${jisho.jlpt[0].toUpperCase().replace('-', ' ')}</span>` : '';
+            const commonSpan = jisho.is_common ? `<span class="dict-tag common">Common</span>` : '';
+            const meaningsHtml = jisho.meanings.map((m, idx) => `<div class="dict-meaning-line"><strong>${idx+1}.</strong> ${m}</div>`).join("");
+            
+            const postsListHtml = entry.posts.map(p => `<li><a href="${p.url}">${p.title}</a></li>`).join("");
+
+            return `
+            <div class="dict-card interactive-card">
+                <div class="dict-header">
+                    <div class="dict-word">${w} <span class="dict-romaji">(${jisho.reading})</span></div>
+                    <div class="dict-tags">${jlptSpan}${commonSpan}</div>
+                </div>
+                <div class="dict-meanings">${meaningsHtml}</div>
+                
+                <details class="dict-posts">
+                   <summary>見つかった場所 (${entry.posts.length} 記事)</summary>
+                   <ul>${postsListHtml}</ul>
+                </details>
+            </div>`;
+        }).join("");
+    }
+
+    // Attach events
+    searchInput.addEventListener("input", render);
+    
+    filtersDiv.addEventListener("click", e => {
+        if (e.target.tagName === "BUTTON") {
+            document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+            e.target.classList.add("active");
+            currentFilter = e.target.getAttribute("data-level");
+            render();
+        }
+    });
+
+    render();
+});
+</script>
+
+      </div>
+    </main></body>
+</html>

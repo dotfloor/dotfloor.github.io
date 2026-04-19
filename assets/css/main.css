@@ -172,7 +172,6 @@ img {
 	font-size: 0.85em;
 	margin-bottom: 1rem;
 	align-self: flex-start;
-	transition: opacity 0.2s;
 }
 
 .btn-toggle:hover {
@@ -245,4 +244,56 @@ body.hide-furigana .vocab-list-container rt {
 	flex-direction: column;
 	gap: 0.4rem;
 	font-size: 0.9em;
+}
+
+/* Dashboard Specifics */
+.dashboard-stats {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.dashboard-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+#vocab-search {
+	font-family: inherit;
+	padding: 0.5rem;
+	border: thin solid currentColor;
+	background: transparent;
+	color: inherit;
+	font-size: 1rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#jlpt-filters {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.filter-btn.active {
+	color: blue;
+}
+
+.dict-posts {
+	margin-top: 0.5rem;
+	padding-top: 0.5rem;
+	border-top: thin dashed currentColor;
+	font-size: 0.85em;
+}
+
+.dict-posts summary {
+	cursor: pointer;
+	font-weight: bold;
+	opacity: 0.8;
+}
+
+.dict-posts summary:hover {
+	opacity: 1;
 }
