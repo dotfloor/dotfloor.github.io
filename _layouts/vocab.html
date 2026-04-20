@@ -4,136 +4,143 @@ layout: page
 {{ content }}
 
 <div id="vocab-dashboard">
-  <div class="dashboard-stats">
-    <div class="stat-box"><strong>総単語数：</strong> <span id="stat-total">0</span></div>
-    <div id="stat-jlpt-breakdown"></div>
-  </div>
-  
-  <hr />
-
-  <div class="dashboard-controls">
-    <input type="text" id="vocab-search" placeholder="意味、漢字、読み方で検索..." autocomplete="off" />
-    <div id="jlpt-filters">
-        <!-- JS injected filters -->
+    <div class="dashboard-stats">
+        <div class="stat-box"><strong>総単語数：</strong> <span id="stat-total">0</span></div>
+        <div id="stat-jlpt-breakdown"></div>
     </div>
-  </div>
 
-  <div id="vocab-results" class="vocab-list-container">
-     <em>辞書データを読み込み中...</em>
-  </div>
-  
-  <div class="jisho-attribution">辞書データ提供：<a href="https://jisho.org" target="_blank">Jisho.org</a></div>
+    <hr />
+
+    <div class="dashboard-controls">
+        <input type="text" id="vocab-search" placeholder="意味、漢字、読み方で検索..." autocomplete="off" />
+        <div id="jlpt-filters">
+            <!-- JS injected filters -->
+        </div>
+    </div>
+
+    <div id="vocab-results" class="vocab-list-container">
+        <em>辞書データを読み込み中...</em>
+    </div>
+
+    <div class="jisho-attribution">辞書データ提供：<a href="https://jisho.org" target="_blank">Jisho.org</a></div>
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", async () => {
-    const resultsDiv = document.getElementById("vocab-results");
-    const searchInput = document.getElementById("vocab-search");
-    const filtersDiv = document.getElementById("jlpt-filters");
-    
-    let masterData = {};
-    let words = [];
-    let currentFilter = null;
-    
-    try {
-        const res = await fetch("/assets/vocab-data.json");
-        masterData = await res.json();
-        words = Object.keys(masterData);
-    } catch (e) {
-        resultsDiv.innerHTML = "<em>語彙データの読み込みに失敗しました。</em>";
-        return;
-    }
-    
-    // Compute stats
-    document.getElementById("stat-total").innerText = words.length;
-    
-    const jlptCounts = {};
-    words.forEach(w => {
-        const jlpt = masterData[w].jisho.jlpt;
-        if (jlpt && jlpt.length > 0) {
-            const level = jlpt[0].toUpperCase().replace('-', ' ');
-            jlptCounts[level] = (jlptCounts[level] || 0) + 1;
-        }
-    });
-    
-    const breakdownHtml = Object.keys(jlptCounts).sort().map(level => 
-        `<span class="dict-tag jlpt">${level}: ${jlptCounts[level]}</span>`
-    ).join(' ');
-    document.getElementById("stat-jlpt-breakdown").innerHTML = breakdownHtml;
+    document.addEventListener("DOMContentLoaded", async () => {
+        const resultsDiv = document.getElementById("vocab-results");
+        const searchInput = document.getElementById("vocab-search");
+        const filtersDiv = document.getElementById("jlpt-filters");
 
-    // Filters
-    const filterHtml = Object.keys(jlptCounts).sort().map(level =>
-        `<button class="btn-toggle filter-btn" data-level="${level}">${level}</button>`
-    ).join(' ');
-    filtersDiv.innerHTML = `<button class="btn-toggle filter-btn active" data-level="ALL">ALL</button> ` + filterHtml;
-    
-    // Re-render function
-    function render() {
-        const query = searchInput.value.toLowerCase();
-        
-        const filteredWords = words.filter(w => {
-            const data = masterData[w];
-            const jisho = data.jisho;
-			
-            // Text Search
-            const searchableText = (w + " " + jisho.reading + " " + (jisho.romaji || "") + " " + jisho.meanings.join(" ")).toLowerCase();
-            if (query && !searchableText.includes(query)) return false;
-            
-            // JLPT Filter
-            if (currentFilter && currentFilter !== "ALL") {
-                if (!jisho.jlpt || jisho.jlpt.length === 0) return false;
-                if (jisho.jlpt[0].toUpperCase().replace('-', ' ') !== currentFilter) return false;
-            }
-            
-            return true;
-        });
-        
-        if (filteredWords.length === 0) {
-            resultsDiv.innerHTML = "<em>単語が見つかりませんでした。</em>";
+        let masterData = {};
+        let words = [];
+        let currentFilter = null;
+
+        try {
+            const res = await fetch("/assets/vocab-data.json");
+            masterData = await res.json();
+            words = Object.keys(masterData);
+        } catch (e) {
+            resultsDiv.innerHTML = "<em>語彙データの読み込みに失敗しました。</em>";
             return;
         }
 
-        resultsDiv.innerHTML = filteredWords.map(w => {
-            const entry = masterData[w];
-            const jisho = entry.jisho;
-            
-            const jlptSpan = jisho.jlpt.length > 0 ? `<span class="dict-tag jlpt">${jisho.jlpt[0].toUpperCase().replace('-', ' ')}</span>` : '';
-            const commonSpan = jisho.is_common ? `<span class="dict-tag common">Common</span>` : '';
-            const meaningsHtml = jisho.meanings.map((m, idx) => `<div class="dict-meaning-line"><strong>${idx+1}.</strong> ${m}</div>`).join("");
-            
-            const postsListHtml = entry.posts.map(p => `<li><a href="${p.url}">${p.title}</a></li>`).join("");
+        // Compute stats
+        document.getElementById("stat-total").innerText = words.length;
 
-            const wordHtml = jisho.reading ? `<ruby>${jisho.word || w}<rt>${jisho.reading}</rt></ruby>` : (jisho.word || w);
-            const romajiSpan = entry.romaji ? `<span class="dict-romaji">${entry.romaji}</span>` : '';
+        const jlptCounts = {};
+        words.forEach(w => {
+            const jlpt = masterData[w].jisho.jlpt;
+            if (jlpt && jlpt.length > 0) {
+                const level = jlpt[0].toUpperCase().replace('-', ' ');
+                jlptCounts[level] = (jlptCounts[level] || 0) + 1;
+            }
+        });
 
-            return `
+        const breakdownHtml = Object.keys(jlptCounts).sort().map(level =>
+            `<span class="dict-tag jlpt">${level}: ${jlptCounts[level]}</span>`
+        ).join(' ');
+        document.getElementById("stat-jlpt-breakdown").innerHTML = breakdownHtml;
+
+        // Filters
+        const filterHtml = Object.keys(jlptCounts).sort().map(level =>
+            `<button class="btn-toggle filter-btn" data-level="${level}">${level}</button>`
+        ).join(' ');
+        filtersDiv.innerHTML = `<button class="btn-toggle filter-btn active" data-level="ALL">ALL</button> ` + filterHtml;
+
+        // Re-render function
+        function render() {
+            const query = searchInput.value.toLowerCase();
+
+            const filteredWords = words.filter(w => {
+                const data = masterData[w];
+                const jisho = data.jisho;
+
+                // Text Search
+                const searchableText = (w + " " + jisho.reading + " " + (jisho.romaji || "") + " " + jisho.meanings.join(" ")).toLowerCase();
+                if (query && !searchableText.includes(query)) return false;
+
+                // JLPT Filter
+                if (currentFilter && currentFilter !== "ALL") {
+                    if (!jisho.jlpt || jisho.jlpt.length === 0) return false;
+                    if (jisho.jlpt[0].toUpperCase().replace('-', ' ') !== currentFilter) return false;
+                }
+
+                return true;
+            });
+
+            if (filteredWords.length === 0) {
+                resultsDiv.innerHTML = "<em>単語が見つかりませんでした。</em>";
+                return;
+            }
+
+            resultsDiv.innerHTML = filteredWords.map(w => {
+                const entry = masterData[w];
+                const jisho = entry.jisho;
+
+                const jlptSpan = jisho.jlpt.length > 0 ? `<span class="dict-tag jlpt">${jisho.jlpt[0].toUpperCase().replace('-', ' ')}</span>` : '';
+                const commonSpan = jisho.is_common ? `<span class="dict-tag common">Common</span>` : '';
+                const meaningsHtml = jisho.meanings.map((m, idx) => `<div class="dict-meaning-line"><strong>${idx + 1}.</strong> ${m}</div>`).join("");
+
+                let posHtml = '';
+                if (jisho.pos && jisho.pos.length > 0) {
+                    const posItems = jisho.pos.map(p => `<li>${p}</li>`).join("");
+                    posHtml = `<details class="dict-posts dict-pos"><summary>品詞 (PoS)</summary><ul>${posItems}</ul></details>`;
+                }
+
+                const postsListHtml = entry.posts.map(p => `<li><a href="${p.url}">${p.title}</a></li>`).join("");
+
+                const wordHtml = jisho.reading ? `<ruby>${jisho.word || w}<rt>${jisho.reading}</rt></ruby>` : (jisho.word || w);
+                const romajiSpan = entry.romaji ? `<span class="dict-romaji">${entry.romaji}</span>` : '';
+
+                return `
             <div class="dict-card interactive-card">
                 <div class="dict-header">
                     <div class="dict-word">${wordHtml}${romajiSpan}</div>
                     <div class="dict-tags">${jlptSpan}${commonSpan}</div>
                 </div>
                 <div class="dict-meanings">${meaningsHtml}</div>
+                ${posHtml}
                 
                 <details class="dict-posts">
                    <summary>見つかった場所 (${entry.posts.length} 記事)</summary>
                    <ul>${postsListHtml}</ul>
                 </details>
             </div>`;
-        }).join("");
-    }
-
-    // Attach events
-    searchInput.addEventListener("input", render);
-    
-    filtersDiv.addEventListener("click", e => {
-        if (e.target.tagName === "BUTTON") {
-            document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-            e.target.classList.add("active");
-            currentFilter = e.target.getAttribute("data-level");
-            render();
+            }).join("");
         }
-    });
 
-    render();
-});
+        // Attach events
+        searchInput.addEventListener("input", render);
+
+        filtersDiv.addEventListener("click", e => {
+            if (e.target.tagName === "BUTTON") {
+                document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                e.target.classList.add("active");
+                currentFilter = e.target.getAttribute("data-level");
+                render();
+            }
+        });
+
+        render();
+    });
 </script>

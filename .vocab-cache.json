@@ -1,243 +1,4 @@
 {
-  "食べる": {
-    "word": "食べる",
-    "reading": "たべる",
-    "jlpt": [
-      "jlpt-n5"
-    ],
-    "is_common": true,
-    "meanings": [
-      "to eat",
-      "to live on (e.g. a salary); to live off; to subsist on"
-    ]
-  },
-  "資格": {
-    "word": "資格",
-    "reading": "しかく",
-    "jlpt": [
-      "jlpt-n1"
-    ],
-    "is_common": true,
-    "meanings": [
-      "qualifications; requirements; capabilities",
-      "Professional certification"
-    ]
-  },
-  "学校": {
-    "word": "学校",
-    "reading": "がっこう",
-    "jlpt": [
-      "jlpt-n5"
-    ],
-    "is_common": true,
-    "meanings": [
-      "school",
-      "Gakkou",
-      "School"
-    ]
-  },
-  "勉強": {
-    "word": "勉強",
-    "reading": "べんきょう",
-    "jlpt": [
-      "jlpt-n3",
-      "jlpt-n5"
-    ],
-    "is_common": true,
-    "meanings": [
-      "study",
-      "diligence; working hard",
-      "experience; knowledge; lesson (for the future)",
-      "discount; price reduction"
-    ]
-  },
-  "日本語": {
-    "word": "日本語",
-    "reading": "にほんご",
-    "jlpt": [],
-    "is_common": true,
-    "meanings": [
-      "Japanese (language)",
-      "Japanese language"
-    ]
-  },
-  "母語": {
-    "word": "母語",
-    "reading": "ぼご",
-    "jlpt": [],
-    "is_common": false,
-    "meanings": [
-      "mother tongue; native language",
-      "protolanguage; parent language",
-      "First language"
-    ]
-  },
-  "場所": {
-    "word": "場所",
-    "reading": "ばしょ",
-    "jlpt": [
-      "jlpt-n4"
-    ],
-    "is_common": true,
-    "meanings": [
-      "place; location; spot; position; area",
-      "room; space",
-      "sumo tournament"
-    ]
-  },
-  "目的": {
-    "word": "目的",
-    "reading": "もくてき",
-    "jlpt": [
-      "jlpt-n3"
-    ],
-    "is_common": true,
-    "meanings": [
-      "purpose; goal; aim; objective; intention; motive"
-    ]
-  },
-  "言語": {
-    "word": "言語",
-    "reading": "げんご",
-    "jlpt": [
-      "jlpt-n3"
-    ],
-    "is_common": true,
-    "meanings": [
-      "language",
-      "Language"
-    ]
-  },
-  "習得": {
-    "word": "習得",
-    "reading": "しゅうとく",
-    "jlpt": [],
-    "is_common": true,
-    "meanings": [
-      "learning; acquisition (of a skill, knowledge, etc.)"
-    ]
-  },
-  "自己": {
-    "word": "自己",
-    "reading": "じこ",
-    "jlpt": [
-      "jlpt-n1"
-    ],
-    "is_common": true,
-    "meanings": [
-      "self; oneself",
-      "Psychology of self"
-    ]
-  },
-  "存在": {
-    "word": "存在",
-    "reading": "そんざい",
-    "jlpt": [
-      "jlpt-n3"
-    ],
-    "is_common": true,
-    "meanings": [
-      "existence; being; presence",
-      "Existence"
-    ]
-  },
-  "維持": {
-    "word": "維持",
-    "reading": "いじ",
-    "jlpt": [
-      "jlpt-n3"
-    ],
-    "is_common": true,
-    "meanings": [
-      "maintenance; preservation; improvement"
-    ]
-  },
-  "背景": {
-    "word": "背景",
-    "reading": "はいけい",
-    "jlpt": [
-      "jlpt-n1"
-    ],
-    "is_common": true,
-    "meanings": [
-      "background; scenery; backdrop; setting",
-      "background (of an incident, situation, etc.); circumstances; context",
-      "backing; support (from behind the scenes)"
-    ]
-  },
-  "自身": {
-    "word": "自身",
-    "reading": "じしん",
-    "jlpt": [
-      "jlpt-n3"
-    ],
-    "is_common": true,
-    "meanings": [
-      "(one's) self; oneself; yourself; himself; herself"
-    ]
-  },
-  "言葉": {
-    "word": "言葉",
-    "reading": "ことば",
-    "jlpt": [
-      "jlpt-n5"
-    ],
-    "is_common": true,
-    "meanings": [
-      "language; dialect",
-      "word; phrase; expression; term",
-      "speech; (manner of) speaking; (use of) language",
-      "words; remark; statement; comment",
-      "learning to speak; language acquisition",
-      "Ci (poetry)"
-    ]
-  },
-  "起源": {
-    "word": "起源",
-    "reading": "きげん",
-    "jlpt": [
-      "jlpt-n1"
-    ],
-    "is_common": true,
-    "meanings": [
-      "origin; beginning; source"
-    ]
-  },
-  "拒否感": null,
-  "日々": {
-    "word": "日々",
-    "reading": "ひび",
-    "jlpt": [
-      "jlpt-n1"
-    ],
-    "is_common": true,
-    "meanings": [
-      "daily; everyday",
-      "days (e.g. of one's youth)",
-      "every day; day after day; day by day; from day to day"
-    ]
-  },
-  "投稿": {
-    "word": "投稿",
-    "reading": "とうこう",
-    "jlpt": [],
-    "is_common": true,
-    "meanings": [
-      "contribution (to a newspaper, magazine, etc.); submission; post (on a blog, social media, etc.)"
-    ]
-  },
-  "ふるさと": {
-    "word": "故郷",
-    "reading": "ふるさと",
-    "jlpt": [
-      "jlpt-n3"
-    ],
-    "is_common": true,
-    "meanings": [
-      "hometown; birthplace; native place; one's old home",
-      "ruins; historic remains"
-    ]
-  },
   "日記": {
     "word": "日記",
     "reading": "にっき",
@@ -248,6 +9,9 @@
     "meanings": [
       "diary; journal",
       "Diary"
+    ],
+    "pos": [
+      "Noun"
     ]
   },
   "書く": {
@@ -260,18 +24,23 @@
     "meanings": [
       "to write; to compose; to pen",
       "to draw; to paint"
+    ],
+    "pos": [
+      "Godan verb with 'ku' ending",
+      "Transitive verb"
     ]
   },
-  "学習": {
-    "word": "学習",
-    "reading": "がくしゅう",
-    "jlpt": [
-      "jlpt-n3"
-    ],
+  "日本語": {
+    "word": "日本語",
+    "reading": "にほんご",
+    "jlpt": [],
     "is_common": true,
     "meanings": [
-      "learning; study",
-      "Learning"
+      "Japanese (language)",
+      "Japanese language"
+    ],
+    "pos": [
+      "Noun"
     ]
   },
   "やる気": {
@@ -281,6 +50,9 @@
     "is_common": true,
     "meanings": [
       "will (to do something); drive; motivation; enthusiasm; eagerness"
+    ],
+    "pos": [
+      "Noun"
     ]
   },
   "タイプ": {
@@ -295,6 +67,11 @@
       "type (of person); (ideal) type; one's type",
       "typewriter",
       "typing (on a typewriter)"
+    ],
+    "pos": [
+      "Noun",
+      "Suru verb",
+      "Transitive verb"
     ]
   },
   "最近": {
@@ -307,6 +84,11 @@
     "meanings": [
       "recently; lately; these days; nowadays; right now",
       "nearest; closest"
+    ],
+    "pos": [
+      "Noun",
+      "Noun which may take the genitive case particle 'no'",
+      "Adverb (fukushi)"
     ]
   },
   "話す": {
@@ -320,40 +102,116 @@
       "to talk; to speak; to converse; to chat",
       "to tell; to explain; to narrate; to mention; to describe; to discuss",
       "to speak (a language)"
+    ],
+    "pos": [
+      "Godan verb with 'su' ending",
+      "Transitive verb"
     ]
   },
-  "いつか": {
-    "word": "５日",
-    "reading": "いつか",
+  "学校": {
+    "word": "学校",
+    "reading": "がっこう",
     "jlpt": [
       "jlpt-n5"
     ],
     "is_common": true,
     "meanings": [
-      "5th day of the month",
-      "five days",
-      "Itsuka"
+      "school",
+      "Gakkou",
+      "School"
+    ],
+    "pos": [
+      "Noun",
+      "Place"
     ]
   },
-  "できる": {
-    "word": "出来る",
-    "reading": "できる",
+  "嫌い": {
+    "word": "嫌い",
+    "reading": "きらい",
     "jlpt": [
-      "jlpt-n3",
       "jlpt-n5"
     ],
     "is_common": true,
     "meanings": [
-      "to be able to do; to be possible; to be permitted (to do)",
-      "to be good at; to do well; to be proficient (in); to be capable",
-      "to come into existence; to form; to appear; to come up (of a matter); to be born; to make (a friend); to get (a girlfriend, free time, etc.)",
-      "to be made; to be built; to be constructed; to be formed; to be established; to be set up",
-      "to be finished; to be completed; to be done; to be ready",
-      "to grow (of a crop); to be produced",
-      "to be mature and well-balanced; to be of fine character",
-      "to be by nature; to be born ...",
-      "to become (sexually) involved (with); to become intimate (with); to take up (with someone)",
-      "to get pregnant"
+      "disliked; hated; disagreeable",
+      "tendency; smack (of); touch (of)",
+      "distinction; discrimination"
+    ],
+    "pos": [
+      "Na-adjective (keiyodoshi)",
+      "Noun"
+    ]
+  },
+  "顔": {
+    "word": "顔",
+    "reading": "かお",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "face; visage; looks; (facial) features",
+      "look; (facial) expression; countenance",
+      "honor (honour); face; dignity",
+      "influence; notoriety; trust; pull; clout",
+      "representative; (the) face (of something); trademark; example",
+      "members; attendees; lineup; participants; everyone involved",
+      "makeup; cosmetics",
+      "Face"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "声": {
+    "word": "声",
+    "reading": "こえ",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "voice",
+      "singing (of a bird); chirping (of an insect); hoot",
+      "voice; opinion (as expressed in words); view; wish; attitude; will",
+      "sound",
+      "sense (of something's arrival); feeling",
+      "voice; voiced sound",
+      "Human voice"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "生きる": {
+    "word": "生きる",
+    "reading": "いきる",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to live; to exist",
+      "to make a living; to subsist",
+      "to be in effect; to be in use; to function",
+      "to come to life; to be enlivened",
+      "to be safe (in baseball, go, etc.)",
+      "To Live (film)"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb"
+    ]
+  },
+  "気にする": {
+    "word": "気にする",
+    "reading": "きにする",
+    "jlpt": [],
+    "is_common": false,
+    "meanings": [
+      "to mind (negative nuance); to care about; to worry; to pay undue (amount of) attention to (something)"
+    ],
+    "pos": [
+      "Expressions (phrases, clauses, etc.)",
+      "Suru verb - included"
     ]
   }
 }

@@ -33,12 +33,23 @@ async function getVocabData(word) {
             const jp = entry.japanese[0];
             const meanings = entry.senses.map(s => s.english_definitions.join("; "));
             
+            // Extract unique parts of speech
+            let pos = new Set();
+            entry.senses.forEach(s => {
+                if (s.parts_of_speech) {
+                    s.parts_of_speech.forEach(p => {
+                        if (p !== "Wikipedia definition") pos.add(p);
+                    });
+                }
+            });
+            
             result = {
                 word: jp.word || word,
                 reading: jp.reading || "",
                 jlpt: entry.jlpt || [],
                 is_common: entry.is_common || false,
-                meanings: meanings
+                meanings: meanings,
+                pos: Array.from(pos)
             };
         }
         
@@ -143,6 +154,12 @@ async function getVocabData(word) {
                     const jlptSpan = data.jlpt.length > 0 ? `<span class="dict-tag jlpt">${data.jlpt[0].toUpperCase().replace('-', ' ')}</span>` : '';
                     const commonSpan = data.is_common ? `<span class="dict-tag common">Common</span>` : '';
                     
+                    let posHtml = '';
+                    if (data.pos && data.pos.length > 0) {
+                        const posItems = data.pos.map(p => `<li>${p}</li>`).join("");
+                        posHtml = `<details class="dict-posts dict-pos"><summary>品詞 (PoS)</summary><ul>${posItems}</ul></details>`;
+                    }
+                    
                     const meaningsHtml = data.meanings.map((m, idx) => `<div class="dict-meaning-line"><strong>${idx+1}.</strong> ${m}</div>`).join("");
                     
                     let wordHtml = data.reading ? `<ruby>${data.word}<rt>${data.reading}</rt></ruby>` : data.word;
@@ -158,6 +175,7 @@ async function getVocabData(word) {
                             <div class="dict-tags">${jlptSpan}${commonSpan}</div>
                         </div>
                         <div class="dict-meanings">${meaningsHtml}</div>
+                        ${posHtml}
                     </div>`;
                 }
 

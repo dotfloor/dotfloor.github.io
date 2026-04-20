@@ -178,6 +178,8 @@ img {
 	font-size: 0.85em;
 	margin-bottom: 1rem;
 	align-self: flex-start;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .btn-toggle:hover {
@@ -306,6 +308,8 @@ body.hide-furigana .vocab-list-container rt {
 	cursor: pointer;
 	font-weight: bold;
 	opacity: 0.8;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .dict-posts summary:hover {
