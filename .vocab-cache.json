@@ -1,0 +1,229 @@
+{
+  "食べる": {
+    "word": "食べる",
+    "reading": "たべる",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to eat",
+      "to live on (e.g. a salary); to live off; to subsist on"
+    ]
+  },
+  "資格": {
+    "word": "資格",
+    "reading": "しかく",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "qualifications; requirements; capabilities",
+      "Professional certification"
+    ]
+  },
+  "学校": {
+    "word": "学校",
+    "reading": "がっこう",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "school",
+      "Gakkou",
+      "School"
+    ]
+  },
+  "勉強": {
+    "word": "勉強",
+    "reading": "べんきょう",
+    "jlpt": [
+      "jlpt-n3",
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "study",
+      "diligence; working hard",
+      "experience; knowledge; lesson (for the future)",
+      "discount; price reduction"
+    ]
+  },
+  "日本語": {
+    "word": "日本語",
+    "reading": "にほんご",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "Japanese (language)",
+      "Japanese language"
+    ]
+  },
+  "母語": {
+    "word": "母語",
+    "reading": "ぼご",
+    "jlpt": [],
+    "is_common": false,
+    "meanings": [
+      "mother tongue; native language",
+      "protolanguage; parent language",
+      "First language"
+    ]
+  },
+  "場所": {
+    "word": "場所",
+    "reading": "ばしょ",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "place; location; spot; position; area",
+      "room; space",
+      "sumo tournament"
+    ]
+  },
+  "目的": {
+    "word": "目的",
+    "reading": "もくてき",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "purpose; goal; aim; objective; intention; motive"
+    ]
+  },
+  "言語": {
+    "word": "言語",
+    "reading": "げんご",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "language",
+      "Language"
+    ]
+  },
+  "習得": {
+    "word": "習得",
+    "reading": "しゅうとく",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "learning; acquisition (of a skill, knowledge, etc.)"
+    ]
+  },
+  "自己": {
+    "word": "自己",
+    "reading": "じこ",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "self; oneself",
+      "Psychology of self"
+    ]
+  },
+  "存在": {
+    "word": "存在",
+    "reading": "そんざい",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "existence; being; presence",
+      "Existence"
+    ]
+  },
+  "維持": {
+    "word": "維持",
+    "reading": "いじ",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "maintenance; preservation; improvement"
+    ]
+  },
+  "背景": {
+    "word": "背景",
+    "reading": "はいけい",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "background; scenery; backdrop; setting",
+      "background (of an incident, situation, etc.); circumstances; context",
+      "backing; support (from behind the scenes)"
+    ]
+  },
+  "自身": {
+    "word": "自身",
+    "reading": "じしん",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "(one's) self; oneself; yourself; himself; herself"
+    ]
+  },
+  "言葉": {
+    "word": "言葉",
+    "reading": "ことば",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "language; dialect",
+      "word; phrase; expression; term",
+      "speech; (manner of) speaking; (use of) language",
+      "words; remark; statement; comment",
+      "learning to speak; language acquisition",
+      "Ci (poetry)"
+    ]
+  },
+  "起源": {
+    "word": "起源",
+    "reading": "きげん",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "origin; beginning; source"
+    ]
+  },
+  "拒否感": null,
+  "日々": {
+    "word": "日々",
+    "reading": "ひび",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "daily; everyday",
+      "days (e.g. of one's youth)",
+      "every day; day after day; day by day; from day to day"
+    ]
+  },
+  "投稿": {
+    "word": "投稿",
+    "reading": "とうこう",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "contribution (to a newspaper, magazine, etc.); submission; post (on a blog, social media, etc.)"
+    ]
+  }
+}

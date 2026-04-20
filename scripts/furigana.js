@@ -22,7 +22,9 @@ async function getVocabData(word) {
 
     console.log(`[Furigana] Fetching dictionary data for: ${word}`);
     try {
-        const res = await fetch(`https://jisho.org/api/v1/search/words?keyword=${encodeURIComponent(word)}`);
+        const res = await fetch(`https://jisho.org/api/v1/search/words?keyword=${encodeURIComponent(word)}`, {
+            headers: { 'User-Agent': 'Mozilla/5.0 (compatible; dotfloor-bot/1.0; +https://github.com/dotfloor/dotfloor.github.io)' }
+        });
         const json = await res.json();
         
         let result = null;
