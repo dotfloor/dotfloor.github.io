@@ -14,7 +14,7 @@ layout: home
 
 ここで、たくさん活動します。頑張りますね。
 
-{% doodle test_drawing_1 %}
+{% doodle dotfloor %}
 
 ---
 

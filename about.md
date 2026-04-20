@@ -11,4 +11,4 @@ title: ABOUT
 
 それはただ一つのことを意味するからです。
 
-{% doodle test_drawing_1 %}
+{% doodle dotfloor %}

@@ -131,6 +131,20 @@
             if (objs.length > 0) canvas.remove(objs[objs.length - 1]);
         };
 
+        const handleKeyDown = (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+                e.preventDefault();
+                undoBtn.click();
+            }
+        };
+        document.addEventListener('keydown', handleKeyDown);
+
+        // Clean up global listener on cancel to prevent leaks
+        cancelBtn.onclick = () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.body.removeChild(modal);
+        };
+
         // Eraser functionality mapping
         eraserBtn.onclick = () => {
             isEraser = !isEraser;
