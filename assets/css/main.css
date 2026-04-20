@@ -328,7 +328,7 @@ body.hide-furigana .vocab-list-container rt {
 /* Kana Grid Styles */
 .kana-grid {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(5, minmax(0, 1fr));
 	gap: 0.5rem;
 }
 
@@ -365,9 +365,10 @@ body.hide-furigana .vocab-list-container rt {
 		gap: 0.25rem;
 	}
 	.kana-cell {
-		padding: 0.5rem 0.2rem;
+		padding: 0.5rem 0.1rem;
 	}
 	.kana-primary {
-		font-size: 1.2em;
+		font-size: 1.1em;
+		word-break: break-all;
 	}
 }
