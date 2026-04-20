@@ -8,4 +8,4 @@ layout: home
 
 ---
 
-本サイトは、Riccardo Graziosi による「[no-style-please](https://github.com/riggraz/no-style-please)」Jekyllテーマをベースにしています。
+本サイトは、Riccardo Graziosi による「[no-style-please](https://github.com/riggraz/no-style-please){:target="_blank"}」Jekyllテーマをベースにしています。

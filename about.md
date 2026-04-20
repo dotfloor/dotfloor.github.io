@@ -1,7 +1,9 @@
 ---
 layout: page
-title: .floor
+title: ABOUT
 ---
+
+## .floor
 
 これは、私がまだ制御を及ぼしている数少ない場所の一つです。
 
