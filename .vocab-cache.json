@@ -237,5 +237,123 @@
       "hometown; birthplace; native place; one's old home",
       "ruins; historic remains"
     ]
+  },
+  "日記": {
+    "word": "日記",
+    "reading": "にっき",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "diary; journal",
+      "Diary"
+    ]
+  },
+  "書く": {
+    "word": "書く",
+    "reading": "かく",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to write; to compose; to pen",
+      "to draw; to paint"
+    ]
+  },
+  "学習": {
+    "word": "学習",
+    "reading": "がくしゅう",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "learning; study",
+      "Learning"
+    ]
+  },
+  "やる気": {
+    "word": "やる気",
+    "reading": "やるき",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "will (to do something); drive; motivation; enthusiasm; eagerness"
+    ]
+  },
+  "タイプ": {
+    "word": "タイプ",
+    "reading": "タイプ",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "type; kind; sort; style",
+      "type (of person); (ideal) type; one's type",
+      "typewriter",
+      "typing (on a typewriter)"
+    ]
+  },
+  "最近": {
+    "word": "最近",
+    "reading": "さいきん",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "recently; lately; these days; nowadays; right now",
+      "nearest; closest"
+    ]
+  },
+  "話す": {
+    "word": "話す",
+    "reading": "はなす",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to talk; to speak; to converse; to chat",
+      "to tell; to explain; to narrate; to mention; to describe; to discuss",
+      "to speak (a language)"
+    ]
+  },
+  "いつか": {
+    "word": "５日",
+    "reading": "いつか",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "5th day of the month",
+      "five days",
+      "Itsuka"
+    ]
+  },
+  "できる": {
+    "word": "出来る",
+    "reading": "できる",
+    "jlpt": [
+      "jlpt-n3",
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to be able to do; to be possible; to be permitted (to do)",
+      "to be good at; to do well; to be proficient (in); to be capable",
+      "to come into existence; to form; to appear; to come up (of a matter); to be born; to make (a friend); to get (a girlfriend, free time, etc.)",
+      "to be made; to be built; to be constructed; to be formed; to be established; to be set up",
+      "to be finished; to be completed; to be done; to be ready",
+      "to grow (of a crop); to be produced",
+      "to be mature and well-balanced; to be of fine character",
+      "to be by nature; to be born ...",
+      "to become (sexually) involved (with); to become intimate (with); to take up (with someone)",
+      "to get pregnant"
+    ]
   }
 }
