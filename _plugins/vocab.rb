@@ -7,7 +7,7 @@ module Jekyll
       converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
       html = converter.convert(text)
       
-      "<div class=\"vocab-list-container\" data-nosnippet aria-hidden=\"true\">\n<hr data-content=\"Vocabulary\" />\n<div class=\"vocab-list\">\n#{html}\n</div>\n</div>"
+      "<div class=\"vocab-list-container\" data-nosnippet aria-hidden=\"true\">\n<hr data-content=\"VOCABULARY\" />\n<div class=\"vocab-list\">\n#{html}\n</div>\n</div>"
     end
   end
 end
