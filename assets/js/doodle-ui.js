@@ -56,6 +56,11 @@
         heightInput.type = 'number'; heightInput.style.width = '60px'; heightInput.title = 'Canvas Height';
 
         const clearBtn = document.createElement('button'); clearBtn.innerText = 'Clear';
+        const undoBtn = document.createElement('button'); undoBtn.innerText = 'Undo';
+        
+        const eraserBtn = document.createElement('button'); eraserBtn.innerText = 'Eraser';
+        let isEraser = false;
+
         const cancelBtn = document.createElement('button'); cancelBtn.innerText = 'Cancel';
         cancelBtn.onclick = () => document.body.removeChild(modal);
 
@@ -69,7 +74,7 @@
             document.createTextNode(" W: "), widthInput,
             document.createTextNode(" H: "), heightInput,
             document.createTextNode(" Brush: "), sizePicker, 
-            clearBtn, cancelBtn, saveBtn
+            undoBtn, eraserBtn, clearBtn, cancelBtn, saveBtn
         );
 
         const canvasContainer = document.createElement('div');
@@ -119,6 +124,30 @@
         bgPicker.onchange = updateBg;
         transCheckbox.onchange = updateBg;
         sizePicker.oninput = () => canvas.freeDrawingBrush.width = parseInt(sizePicker.value, 10);
+
+        // Undo functionality
+        undoBtn.onclick = () => {
+            const objs = canvas.getObjects();
+            if (objs.length > 0) canvas.remove(objs[objs.length - 1]);
+        };
+
+        // Eraser functionality mapping
+        eraserBtn.onclick = () => {
+            isEraser = !isEraser;
+            eraserBtn.style.backgroundColor = isEraser ? '#ffc107' : '';
+            eraserBtn.style.color = isEraser ? 'black' : '';
+            canvas.isDrawingMode = !isEraser;
+            canvas.selection = !isEraser; // Disable grouping
+            canvas.getObjects().forEach(o => o.set('hoverCursor', isEraser ? 'crosshair' : 'move'));
+        };
+
+        // When in Eraser mode, clicking or scrubbing over strokes wipes them out!
+        canvas.on('mouse:down', (e) => {
+            if (isEraser && e.target) canvas.remove(e.target);
+        });
+        canvas.on('mouse:move', (e) => {
+            if (isEraser && e.e.buttons === 1 && e.target) canvas.remove(e.target);
+        });
 
         clearBtn.onclick = () => { canvas.clear(); updateBg(); };
 
