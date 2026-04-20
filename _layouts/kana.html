@@ -1,0 +1,83 @@
+---
+layout: page
+---
+{{ content }}
+
+<div id="kana-dashboard">
+  <div class="dashboard-controls" style="flex-direction: row; flex-wrap: wrap; margin-bottom: 2rem;">
+    <button class="btn-toggle filter-btn active" data-type="hiragana">ひらがな (HIRAGANA)</button>
+    <button class="btn-toggle filter-btn" data-type="katakana">カタカナ (KATAKANA)</button>
+    <button class="btn-toggle filter-btn" data-type="both">両方</button>
+  </div>
+
+  <div id="kana-grid" class="kana-grid"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("kana-grid");
+    const btns = document.querySelectorAll("#kana-dashboard .filter-btn");
+    
+    let currentMode = "hiragana"; // hiragana | katakana | both
+
+    const kanaData = [
+        {h:'あ', k:'ア', r:'A'}, {h:'い', k:'イ', r:'I'}, {h:'う', k:'ウ', r:'U'}, {h:'え', k:'エ', r:'E'}, {h:'お', k:'オ', r:'O'},
+        {h:'か', k:'カ', r:'KA'}, {h:'き', k:'キ', r:'KI'}, {h:'く', k:'ク', r:'KU'}, {h:'け', k:'ケ', r:'KE'}, {h:'こ', k:'コ', r:'KO'},
+        {h:'さ', k:'サ', r:'SA'}, {h:'し', k:'シ', r:'SHI'}, {h:'す', k:'ス', r:'SU'}, {h:'せ', k:'セ', r:'SE'}, {h:'そ', k:'ソ', r:'SO'},
+        {h:'た', k:'タ', r:'TA'}, {h:'ち', k:'チ', r:'CHI'}, {h:'つ', k:'ツ', r:'TSU'}, {h:'て', k:'テ', r:'TE'}, {h:'と', k:'ト', r:'TO'},
+        {h:'な', k:'ナ', r:'NA'}, {h:'に', k:'ニ', r:'NI'}, {h:'ぬ', k:'ヌ', r:'NU'}, {h:'ね', k:'ネ', r:'NE'}, {h:'の', k:'ノ', r:'NO'},
+        {h:'は', k:'ハ', r:'HA'}, {h:'ひ', k:'ヒ', r:'HI'}, {h:'ふ', k:'フ', r:'FU'}, {h:'へ', k:'ヘ', r:'HE'}, {h:'ほ', k:'ホ', r:'HO'},
+        {h:'ま', k:'マ', r:'MA'}, {h:'み', k:'ミ', r:'MI'}, {h:'む', k:'ム', r:'MU'}, {h:'め', k:'メ', r:'ME'}, {h:'も', k:'モ', r:'MO'},
+        {h:'や', k:'ヤ', r:'YA'}, null, {h:'ゆ', k:'ユ', r:'YU'}, null, {h:'よ', k:'ヨ', r:'YO'},
+        {h:'ら', k:'ラ', r:'RA'}, {h:'り', k:'リ', r:'RI'}, {h:'る', k:'ル', r:'RU'}, {h:'れ', k:'レ', r:'RE'}, {h:'ろ', k:'ロ', r:'RO'},
+        {h:'わ', k:'ワ', r:'WA'}, null, null, null, {h:'を', k:'ヲ', r:'WO'},
+        {h:'ん', k:'ン', r:'N'}, null, null, null, null,
+        
+        {h:'が', k:'ガ', r:'GA'}, {h:'ぎ', k:'ギ', r:'GI'}, {h:'ぐ', k:'グ', r:'GU'}, {h:'げ', k:'ゲ', r:'GE'}, {h:'ご', k:'ゴ', r:'GO'},
+        {h:'ざ', k:'ザ', r:'ZA'}, {h:'じ', k:'ジ', r:'JI'}, {h:'ず', k:'ズ', r:'ZU'}, {h:'ぜ', k:'ゼ', r:'ZE'}, {h:'ぞ', k:'ゾ', r:'ZO'},
+        {h:'だ', k:'ダ', r:'DA'}, {h:'ぢ', k:'ヂ', r:'JI'}, {h:'づ', k:'ヅ', r:'ZU'}, {h:'で', k:'デ', r:'DE'}, {h:'ど', k:'ド', r:'DO'},
+        {h:'ば', k:'バ', r:'BA'}, {h:'び', k:'ビ', r:'BI'}, {h:'ぶ', k:'ブ', r:'BU'}, {h:'べ', k:'ベ', r:'BE'}, {h:'ぼ', k:'ボ', r:'BO'},
+        
+        {h:'ぱ', k:'パ', r:'PA'}, {h:'ぴ', k:'ピ', r:'PI'}, {h:'ぷ', k:'プ', r:'PU'}, {h:'ぺ', k:'ペ', r:'PE'}, {h:'ぽ', k:'ポ', r:'PO'}
+    ];
+
+    function render() {
+        let html = '';
+        kanaData.forEach(cell => {
+            if (!cell) {
+                html += '<div class="kana-cell empty"></div>';
+                return;
+            }
+
+            let primary = '';
+            let secondary = '';
+
+            if (currentMode === 'hiragana') {
+                primary = cell.h;
+            } else if (currentMode === 'katakana') {
+                primary = cell.k;
+            } else {
+                primary = cell.h + ' ' + cell.k;
+            }
+
+            html += `
+            <div class="kana-cell">
+                <div class="kana-primary">${primary}</div>
+                <div class="kana-romaji">${cell.r}</div>
+            </div>`;
+        });
+        grid.innerHTML = html;
+    }
+
+    btns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            btns.forEach(b => b.classList.remove("active"));
+            e.target.classList.add("active");
+            currentMode = e.target.getAttribute("data-type");
+            render();
+        });
+    });
+
+    render();
+});
+</script>

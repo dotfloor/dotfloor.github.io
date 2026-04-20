@@ -1,5 +1,5 @@
 entries:
-  - title: 最近の記録
+  - title: RECENT
     post_list:
       limit: 5
       show_more: true
@@ -14,3 +14,6 @@ entries:
 
   - title: VOCAB
     url: vocab.html
+
+  - title: KANA
+    url: kana.html
