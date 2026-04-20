@@ -99,10 +99,28 @@ async function getVocabData(word) {
 
             // 2. Process Main Article Furigana
             for (const article of articles) {
-                const contentHTML = article.innerHTML;
-                const converted = await kuroshiro.convert(contentHTML, { mode: "furigana", to: "hiragana" });
+                let contentHTML = article.innerHTML;
+
+                // Pre-process `[Kanji:Furigana]` shorthand before anything else
+                contentHTML = contentHTML.replace(/\[([^\]:]+):([^\]]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>");
+
+                // Protect manually-written <ruby> tags by replacing them with temporary tokens
+                const rubyPlaceholders = [];
+                contentHTML = contentHTML.replace(/<ruby>[\s\S]*?<\/ruby>/gi, (match) => {
+                    rubyPlaceholders.push(match);
+                    return `__YAY_RUBY_TOKEN_${rubyPlaceholders.length - 1}__`;
+                });
+
+                let converted = await kuroshiro.convert(contentHTML, { mode: "furigana", to: "hiragana" });
                 
-                if (converted !== contentHTML) {
+                // Restore protected tags
+                rubyPlaceholders.forEach((rubyOrigin, index) => {
+                    converted = converted.replace(`__YAY_RUBY_TOKEN_${index}__`, rubyOrigin);
+                });
+
+                // Update if the final HTML is fundamentally different 
+                // We check against the literal original innerHTML, ignoring placeholder side-effects
+                if (converted !== article.innerHTML) {
                     article.innerHTML = converted;
                     changed = true;
                 }
