@@ -225,5 +225,17 @@
     "meanings": [
       "contribution (to a newspaper, magazine, etc.); submission; post (on a blog, social media, etc.)"
     ]
+  },
+  "ふるさと": {
+    "word": "故郷",
+    "reading": "ふるさと",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "hometown; birthplace; native place; one's old home",
+      "ruins; historic remains"
+    ]
   }
 }

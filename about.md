@@ -11,4 +11,4 @@ title: ABOUT
 
 それはただ一つのことを意味するからです。
 
-![.floor](/assets/images/dotfloor.png)
+{% doodle test_drawing_1 %}
