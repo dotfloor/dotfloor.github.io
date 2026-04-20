@@ -35,7 +35,7 @@
         });
 
         const colorPicker = document.createElement('input');
-        colorPicker.type = 'color'; colorPicker.value = '#ffffff'; colorPicker.style.cursor = 'pointer';
+        colorPicker.type = 'color'; colorPicker.value = '#7f7f7f'; colorPicker.style.cursor = 'pointer';
 
         const bgPicker = document.createElement('input');
         bgPicker.type = 'color'; bgPicker.value = '#ffffff'; bgPicker.style.cursor = 'pointer';
