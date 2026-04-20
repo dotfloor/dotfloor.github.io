@@ -20,6 +20,54 @@
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+Rounded+1c:wght@400;700&family=Shippori+Mincho&family=Yusei+Magic&display=swap" rel="stylesheet">
+  
+  <script>
+    const jpFonts = [
+      'monospace',
+      '"M PLUS Rounded 1c", "Helvetica Neue", sans-serif',
+      '"Shippori Mincho", "Times New Roman", serif',
+      '"DotGothic16", monospace',
+      '"Yusei Magic", sans-serif'
+    ];
+    
+    // Apply font variables instantly to circumvent flash of unstyled content
+    const savedFontIndex = localStorage.getItem('site_font_index');
+    if (savedFontIndex && savedFontIndex > 0) {
+      document.documentElement.style.setProperty('--site-font', jpFonts[savedFontIndex]);
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      // Snatch the primary H1 header as the trigger node
+      const h1 = document.querySelector('h1');
+      if (h1) {
+        h1.style.cursor = 'pointer';
+        h1.title = 'Switch Reading Font';
+        
+        // Add subtle UX hover hints
+        h1.style.transition = 'opacity';
+        h1.addEventListener('mouseover', () => h1.style.opacity = '0.5');
+        h1.addEventListener('mouseout', () => h1.style.opacity = '1');
+        
+        // Cyclical state mechanism
+        h1.addEventListener('click', () => {
+          let currentIndex = parseInt(localStorage.getItem('site_font_index') || 0);
+          currentIndex = (currentIndex + 1) % jpFonts.length;
+          localStorage.setItem('site_font_index', currentIndex);
+          
+          if (currentIndex === 0) {
+            document.documentElement.style.removeProperty('--site-font');
+          } else {
+            document.documentElement.style.setProperty('--site-font', jpFonts[currentIndex]);
+          }
+        });
+      }
+    });
+  </script>
+
   {%- if jekyll.environment == "production" -%}
   <script defer src="https://cloud.umami.is/script.js" data-website-id="5fad769d-3778-4447-b262-44cae323963a"></script>
   {%- endif -%}
