@@ -76,7 +76,7 @@ layout: page
                 const jisho = data.jisho;
 
                 // Text Search
-                const searchableText = (w + " " + jisho.reading + " " + (jisho.romaji || "") + " " + jisho.meanings.join(" ")).toLowerCase();
+                const searchableText = (w + " " + jisho.reading + " " + (data.romaji || "") + " " + jisho.meanings.join(" ")).toLowerCase();
                 if (query && !searchableText.includes(query)) return false;
 
                 // JLPT Filter

@@ -1,5 +1,6 @@
 const Kuroshiro = require("kuroshiro");
 const KuromojiAnalyzer = require("kuroshiro-analyzer-kuromoji");
+const wanakana = require("wanakana");
 const { JSDOM } = require("jsdom");
 const glob = require("glob");
 const fs = require("fs");
@@ -16,9 +17,24 @@ function saveCache() {
     fs.writeFileSync(CACHE_FILE, JSON.stringify(vocabCache, null, 2), "utf-8");
 }
 
+function computeRomaji(reading) {
+    if (!reading) return "";
+    return wanakana.toRomaji(reading, { convertLongVowelMark: true, upcaseKatakana: false });
+}
+
 // Fetch dictionary data
 async function getVocabData(word) {
-    if (vocabCache[word]) return vocabCache[word];
+    if (vocabCache[word]) {
+        const cached = vocabCache[word];
+        if (cached) {
+            const recomputedRomaji = computeRomaji(cached.reading || "");
+            if (cached.romaji !== recomputedRomaji) {
+                cached.romaji = recomputedRomaji;
+                saveCache();
+            }
+        }
+        return cached;
+    }
 
     console.log(`[Furigana] Fetching dictionary data for: ${word}`);
     try {
@@ -46,6 +62,7 @@ async function getVocabData(word) {
             result = {
                 word: jp.word || word,
                 reading: jp.reading || "",
+                romaji: computeRomaji(jp.reading || ""),
                 jlpt: entry.jlpt || [],
                 is_common: entry.is_common || false,
                 meanings: meanings,
@@ -163,8 +180,8 @@ async function getVocabData(word) {
                     const meaningsHtml = data.meanings.map((m, idx) => `<div class="dict-meaning-line"><strong>${idx+1}.</strong> ${m}</div>`).join("");
                     
                     let wordHtml = data.reading ? `<ruby>${data.word}<rt>${data.reading}</rt></ruby>` : data.word;
-                    if (data.reading) {
-                        const romaji = await kuroshiro.convert(data.reading, { mode: "spaced", to: "romaji" });
+                    if (data.reading && data.romaji) {
+                        const romaji = data.romaji;
                         wordHtml += `<span class="dict-romaji">${romaji}</span>`;
                     }
 
@@ -196,11 +213,7 @@ async function getVocabData(word) {
                         if (!data) continue;
                         
                         if (!masterVocab[word]) {
-                            let romajiStr = "";
-                            if (data.reading) {
-                                romajiStr = await kuroshiro.convert(data.reading, { mode: "spaced", to: "romaji" });
-                            }
-                            masterVocab[word] = { jisho: data, posts: [], romaji: romajiStr };
+                            masterVocab[word] = { jisho: data, posts: [], romaji: data.romaji || "" };
                         }
                         if (!masterVocab[word].posts.find(p => p.url === postUrl)) {
                             masterVocab[word].posts.push({ title: postTitle, url: postUrl });

@@ -12,7 +12,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "nikki"
   },
   "書く": {
     "word": "書く",
@@ -28,7 +29,8 @@
     "pos": [
       "Godan verb with 'ku' ending",
       "Transitive verb"
-    ]
+    ],
+    "romaji": "kaku"
   },
   "日本語": {
     "word": "日本語",
@@ -41,7 +43,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "nihongo"
   },
   "やる気": {
     "word": "やる気",
@@ -53,7 +56,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "yaruki"
   },
   "タイプ": {
     "word": "タイプ",
@@ -72,7 +76,8 @@
       "Noun",
       "Suru verb",
       "Transitive verb"
-    ]
+    ],
+    "romaji": "taipu"
   },
   "最近": {
     "word": "最近",
@@ -89,7 +94,8 @@
       "Noun",
       "Noun which may take the genitive case particle 'no'",
       "Adverb (fukushi)"
-    ]
+    ],
+    "romaji": "saikin"
   },
   "話す": {
     "word": "話す",
@@ -106,7 +112,8 @@
     "pos": [
       "Godan verb with 'su' ending",
       "Transitive verb"
-    ]
+    ],
+    "romaji": "hanasu"
   },
   "学校": {
     "word": "学校",
@@ -123,7 +130,8 @@
     "pos": [
       "Noun",
       "Place"
-    ]
+    ],
+    "romaji": "gakkou"
   },
   "嫌い": {
     "word": "嫌い",
@@ -140,7 +148,8 @@
     "pos": [
       "Na-adjective (keiyodoshi)",
       "Noun"
-    ]
+    ],
+    "romaji": "kirai"
   },
   "顔": {
     "word": "顔",
@@ -159,7 +168,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "kao"
   },
   "声": {
     "word": "声",
@@ -179,7 +189,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "koe"
   },
   "生きる": {
     "word": "生きる",
@@ -199,7 +210,8 @@
     "pos": [
       "Ichidan verb",
       "Intransitive verb"
-    ]
+    ],
+    "romaji": "ikiru"
   },
   "気にする": {
     "word": "気にする",
@@ -212,7 +224,8 @@
     "pos": [
       "Expressions (phrases, clauses, etc.)",
       "Suru verb - included"
-    ]
+    ],
+    "romaji": "kinisuru"
   },
   "死ぬ": {
     "word": "死ぬ",
@@ -229,7 +242,8 @@
     "pos": [
       "Godan verb with 'nu' ending",
       "Intransitive verb"
-    ]
+    ],
+    "romaji": "shinu"
   },
   "死にたい": {
     "word": "死にたいほどの夜",
@@ -239,7 +253,8 @@
     "meanings": [
       "The Last Time I Committed Suicide"
     ],
-    "pos": []
+    "pos": [],
+    "romaji": ""
   },
   "場所": {
     "word": "場所",
@@ -255,7 +270,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "basho"
   },
   "ひどい": {
     "word": "酷い",
@@ -273,7 +289,8 @@
     ],
     "pos": [
       "I-adjective (keiyoushi)"
-    ]
+    ],
+    "romaji": "hidoi"
   },
   "住む": {
     "word": "住む",
@@ -288,7 +305,8 @@
     "pos": [
       "Godan verb with 'mu' ending",
       "Intransitive verb"
-    ]
+    ],
+    "romaji": "sumu"
   },
   "いつか": {
     "word": "５日",
@@ -305,7 +323,8 @@
     "pos": [
       "Noun",
       "Place"
-    ]
+    ],
+    "romaji": "itsuka"
   },
   "逃げる": {
     "word": "逃げる",
@@ -324,7 +343,8 @@
     "pos": [
       "Ichidan verb",
       "Intransitive verb"
-    ]
+    ],
+    "romaji": "nigeru"
   },
   "ロープ": {
     "word": "ロープ",
@@ -339,7 +359,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "roopu"
   },
   "かける": {
     "word": "掛ける",
@@ -380,7 +401,8 @@
       "Ichidan verb",
       "Transitive verb",
       "Suffix"
-    ]
+    ],
+    "romaji": "kakeru"
   },
   "飛び込む": {
     "word": "飛び込む",
@@ -396,7 +418,8 @@
     "pos": [
       "Godan verb with 'mu' ending",
       "Intransitive verb"
-    ]
+    ],
+    "romaji": "tobikomu"
   },
   "くらい": {
     "word": "暗い",
@@ -415,7 +438,8 @@
     ],
     "pos": [
       "I-adjective (keiyoushi)"
-    ]
+    ],
+    "romaji": "kurai"
   },
   "見つける": {
     "word": "見つける",
@@ -432,7 +456,8 @@
     "pos": [
       "Ichidan verb",
       "Transitive verb"
-    ]
+    ],
+    "romaji": "mitsukeru"
   },
   "汚い": {
     "word": "汚い",
@@ -450,7 +475,8 @@
     ],
     "pos": [
       "I-adjective (keiyoushi)"
-    ]
+    ],
+    "romaji": "kitanai"
   },
   "橋": {
     "word": "橋",
@@ -465,7 +491,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "hashi"
   },
   "消える": {
     "word": "消える",
@@ -485,7 +512,8 @@
     "pos": [
       "Ichidan verb",
       "Intransitive verb"
-    ]
+    ],
+    "romaji": "kieru"
   },
   "体": {
     "word": "体",
@@ -504,7 +532,8 @@
     ],
     "pos": [
       "Noun"
-    ]
+    ],
+    "romaji": "karada"
   },
   "見る": {
     "word": "見る",
@@ -525,7 +554,8 @@
       "Ichidan verb",
       "Transitive verb",
       "Auxiliary verb"
-    ]
+    ],
+    "romaji": "miru"
   },
   "聞く": {
     "word": "聞く",
@@ -547,6 +577,7 @@
     "pos": [
       "Godan verb with 'ku' ending",
       "Transitive verb"
-    ]
+    ],
+    "romaji": "kiku"
   }
 }
