@@ -221,6 +221,33 @@ body.hide-furigana .vocab-list-container rt {
 	margin-top: 4rem;
 }
 
+.post-nav-row {
+	display: flex;
+	gap: 0.75rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+.btn-post-nav {
+	flex: 1 1 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	margin-bottom: 0;
+}
+
+.btn-post-nav.is-disabled {
+	opacity: 0.35;
+	pointer-events: none;
+}
+
+@media (max-width: 600px) {
+	.post-nav-row {
+		gap: 0.5rem;
+	}
+}
+
 .dict-card {
 	border: thin solid currentColor;
 	padding: 1rem;

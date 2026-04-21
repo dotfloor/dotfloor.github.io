@@ -26,6 +26,31 @@ layout: default
 
   {{ content }}
 
+  <nav class="post-nav-row" id="post-nav-row" aria-label="Post navigation">
+    {%- if page.previous.url -%}
+      <a class="btn-toggle btn-post-nav" href="{{ page.previous.url }}">&larr;</a>
+    {%- else -%}
+      <span class="btn-toggle btn-post-nav is-disabled" aria-disabled="true">&larr;</span>
+    {%- endif -%}
+
+    {%- if page.next.url -%}
+      <a class="btn-toggle btn-post-nav" href="{{ page.next.url }}">&rarr;</a>
+    {%- else -%}
+      <span class="btn-toggle btn-post-nav is-disabled" aria-disabled="true">&rarr;</span>
+    {%- endif -%}
+  </nav>
+  <script>
+    // Place post navigation directly above vocabulary when present.
+    document.addEventListener('DOMContentLoaded', function () {
+      const nav = document.getElementById('post-nav-row');
+      const vocab = document.querySelector('.vocab-list-container');
+      if (!nav) return;
+      if (vocab && vocab.parentNode) {
+        vocab.parentNode.insertBefore(nav, vocab);
+      }
+    });
+  </script>
+
   <!-- {%- if page.comments != false -%}
   <div class="post-comments">
     <script src="https://giscus.app/client.js"

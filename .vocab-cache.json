@@ -213,5 +213,278 @@
       "Expressions (phrases, clauses, etc.)",
       "Suru verb - included"
     ]
+  },
+  "死ぬ": {
+    "word": "死ぬ",
+    "reading": "しぬ",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to die; to pass away",
+      "to lose spirit; to lose vigor; to look dead",
+      "to cease; to stop"
+    ],
+    "pos": [
+      "Godan verb with 'nu' ending",
+      "Intransitive verb"
+    ]
+  },
+  "死にたい": {
+    "word": "死にたいほどの夜",
+    "reading": "",
+    "jlpt": [],
+    "is_common": false,
+    "meanings": [
+      "The Last Time I Committed Suicide"
+    ],
+    "pos": []
+  },
+  "場所": {
+    "word": "場所",
+    "reading": "ばしょ",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "place; location; spot; position; area",
+      "room; space",
+      "sumo tournament"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "ひどい": {
+    "word": "酷い",
+    "reading": "ひどい",
+    "jlpt": [
+      "jlpt-n4",
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "cruel; heartless; hard; harsh; severe",
+      "violent; intense; strong; heavy; extreme",
+      "very bad; terrible; awful",
+      "excessive; exorbitant; unreasonable; outrageous; unfair; unjust"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
+  },
+  "住む": {
+    "word": "住む",
+    "reading": "すむ",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to live (of humans); to reside; to inhabit; to dwell; to abide"
+    ],
+    "pos": [
+      "Godan verb with 'mu' ending",
+      "Intransitive verb"
+    ]
+  },
+  "いつか": {
+    "word": "５日",
+    "reading": "いつか",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "5th day of the month",
+      "five days",
+      "Itsuka"
+    ],
+    "pos": [
+      "Noun",
+      "Place"
+    ]
+  },
+  "逃げる": {
+    "word": "逃げる",
+    "reading": "にげる",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to run away; to flee; to get away (e.g. from danger); to escape; to break out; to leave (e.g. one's spouse); to take cover",
+      "to avoid (a question, responsibility, etc.); to evade; to dodge; to shirk; to back away",
+      "to win without being overtaken; to hold off the other contenders (until the finish); to keep the lead (and win)",
+      "to escape (of heat, a gas, etc.); to leak out (e.g. of a scent); to be lost (e.g. of flavor)",
+      "to fail to hold an ideal posture"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb"
+    ]
+  },
+  "ロープ": {
+    "word": "ロープ",
+    "reading": "ロープ",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "rope",
+      "Rope"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "かける": {
+    "word": "掛ける",
+    "reading": "かける",
+    "jlpt": [
+      "jlpt-n4",
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to hang up (e.g. a coat, a picture on the wall); to let hang; to suspend (from); to hoist (e.g. sail); to raise (e.g. flag)",
+      "to put on (e.g. a blanket); to put on top of; to cover; to lay; to spread",
+      "to put on (glasses, etc.); to wear (a necklace, etc.)",
+      "to make (a call)",
+      "to spend (time, money); to expend; to use",
+      "to pour (liquid) onto; to sprinkle (powder or spices) onto; to splash; to throw (e.g. water) onto",
+      "to turn on (an engine, radio, etc.); to set (a dial, alarm clock, etc.); to put on (a DVD, song, etc.); to use (a device, implement, etc.)",
+      "to cause (someone inconvenience, trouble, etc.); to burden (someone); to impose",
+      "to multiply (arithmetic operation)",
+      "to secure (e.g. lock)",
+      "to take a seat; to sit; to rest (something on something else); to support (something on something else)",
+      "to bind",
+      "to wager; to bet; to risk; to stake; to gamble",
+      "to put an effect (spell, anaesthetic, etc.) on",
+      "to hold (a play, festival, etc.)",
+      "to hold an emotion for (pity, hope, etc.)",
+      "to argue (in court); to deliberate (in a meeting); to present (e.g. idea to a conference, etc.)",
+      "to increase further",
+      "to catch (in a trap, etc.)",
+      "to set atop",
+      "to erect (a makeshift building)",
+      "to apply (insurance)",
+      "to pun (on a word); to use (a word) as a pivot word; to play on words",
+      "to be partway doing ...; to begin (but not complete) ...; to be about to ...",
+      "to address (someone); to direct (something, to someone); to do (something, to someone)"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Transitive verb",
+      "Suffix"
+    ]
+  },
+  "飛び込む": {
+    "word": "飛び込む",
+    "reading": "とびこむ",
+    "jlpt": [
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to jump in; to leap in; to plunge into; to dive",
+      "to burst in; to barge in"
+    ],
+    "pos": [
+      "Godan verb with 'mu' ending",
+      "Intransitive verb"
+    ]
+  },
+  "くらい": {
+    "word": "暗い",
+    "reading": "くらい",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "dark; gloomy; murky",
+      "depressed; dispirited; down in the dumps; dark (mood)",
+      "dark (in colour); dull",
+      "ill-boding; dark (e.g. past); suspicious",
+      "unlikely (to succeed); hopeless; unpromising",
+      "unfamiliar (with); ignorant (of)"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
+  },
+  "見つける": {
+    "word": "見つける",
+    "reading": "みつける",
+    "jlpt": [
+      "jlpt-n4",
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to find; to discover; to come across; to spot; to catch (someone doing)",
+      "to be used to seeing; to be familiar with"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Transitive verb"
+    ]
+  },
+  "汚い": {
+    "word": "汚い",
+    "reading": "きたない",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "dirty; filthy; foul; unclean",
+      "disordered; messy; untidy; poor (e.g. handwriting)",
+      "indecent (language, etc.); dirty; vulgar; coarse",
+      "dastardly; mean; base; underhanded",
+      "stingy; greedy"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
+  },
+  "橋": {
+    "word": "橋",
+    "reading": "はし",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "bridge",
+      "Bridge"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "消える": {
+    "word": "消える",
+    "reading": "きえる",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to disappear; to vanish; to go out of sight; to go away; to become lost",
+      "to go out (of a fire, light, etc.); to die; to turn off (e.g. of a TV screen)",
+      "to fade (of a feeling, impression, etc.); to vanish (e.g. of hope)",
+      "to go away (e.g. of a smell, itchiness, sleepiness); to disappear; to fade away (e.g. of footsteps)",
+      "to wear away (e.g. of an inscription); to rub out (of writing); to fade (e.g. of ink)",
+      "to be lost (e.g. of a tradition); to die out; to disappear"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb"
+    ]
   }
 }
