@@ -90,6 +90,17 @@ layout: default
         if (e.key === '3' && vocabDetails) {
           e.preventDefault();
           vocabDetails.open = !vocabDetails.open;
+          return;
+        }
+
+        if (e.key === '4') {
+          const posSections = Array.from(document.querySelectorAll('details.dict-pos'));
+          if (posSections.length === 0) return;
+          e.preventDefault();
+          const shouldOpenAll = posSections.some(section => !section.open);
+          posSections.forEach(section => {
+            section.open = shouldOpenAll;
+          });
         }
       });
     });

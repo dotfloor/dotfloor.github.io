@@ -31,6 +31,26 @@ layout: page
         const searchInput = document.getElementById("vocab-search");
         const filtersDiv = document.getElementById("jlpt-filters");
 
+        const shouldIgnoreShortcuts = (target) => {
+            if (!target) return false;
+            const tag = target.tagName;
+            return target.isContentEditable || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+        };
+
+        document.addEventListener("keydown", (e) => {
+            if (e.altKey || e.ctrlKey || e.metaKey || shouldIgnoreShortcuts(e.target)) return;
+            if (e.key !== '4') return;
+
+            const posSections = Array.from(document.querySelectorAll('details.dict-pos'));
+            if (posSections.length === 0) return;
+
+            e.preventDefault();
+            const shouldOpenAll = posSections.some(section => !section.open);
+            posSections.forEach(section => {
+                section.open = shouldOpenAll;
+            });
+        });
+
         let masterData = {};
         let words = [];
         let currentFilter = null;
