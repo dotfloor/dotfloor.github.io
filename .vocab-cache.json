@@ -486,5 +486,24 @@
       "Ichidan verb",
       "Intransitive verb"
     ]
+  },
+  "体": {
+    "word": "体",
+    "reading": "からだ",
+    "jlpt": [
+      "jlpt-n3",
+      "jlpt-n1",
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "body",
+      "torso; trunk",
+      "build; physique; frame; figure",
+      "health; constitution"
+    ],
+    "pos": [
+      "Noun"
+    ]
   }
 }
