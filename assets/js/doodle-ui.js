@@ -38,12 +38,12 @@
         colorPicker.type = 'color'; colorPicker.value = '#7f7f7f'; colorPicker.style.cursor = 'pointer';
 
         const bgPicker = document.createElement('input');
-        bgPicker.type = 'color'; bgPicker.value = '#ffffff'; bgPicker.style.cursor = 'pointer';
+        bgPicker.type = 'color'; bgPicker.value = '#000000'; bgPicker.style.cursor = 'pointer';
 
         const transLabel = document.createElement('label');
         transLabel.style.display = 'flex'; transLabel.style.alignItems = 'center'; transLabel.style.cursor = 'pointer';
         const transCheckbox = document.createElement('input');
-        transCheckbox.type = 'checkbox'; transCheckbox.checked = true; transCheckbox.style.cursor = 'pointer';
+        transCheckbox.type = 'checkbox'; transCheckbox.checked = false; transCheckbox.style.cursor = 'pointer';
         transLabel.append(transCheckbox, document.createTextNode(' Transparent'));
 
         const sizePicker = document.createElement('input');
@@ -99,7 +99,7 @@
         heightInput.value = ch;
 
         const canvas = new fabric.Canvas(canvasEl.id, {
-            isDrawingMode: true, width: cw, height: ch, backgroundColor: 'transparent'
+            isDrawingMode: true, width: cw, height: ch, backgroundColor: '#000000'
         });
 
         // When user manually types a size:

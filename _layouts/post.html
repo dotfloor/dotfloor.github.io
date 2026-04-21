@@ -28,13 +28,13 @@ layout: default
 
   <nav class="post-nav-row" id="post-nav-row" aria-label="Post navigation">
     {%- if page.previous.url -%}
-      <a class="btn-toggle btn-post-nav" href="{{ page.previous.url }}">&larr;</a>
+      <a class="btn-toggle btn-post-nav" id="post-nav-prev" href="{{ page.previous.url }}">&larr;</a>
     {%- else -%}
       <span class="btn-toggle btn-post-nav is-disabled" aria-disabled="true">&larr;</span>
     {%- endif -%}
 
     {%- if page.next.url -%}
-      <a class="btn-toggle btn-post-nav" href="{{ page.next.url }}">&rarr;</a>
+      <a class="btn-toggle btn-post-nav" id="post-nav-next" href="{{ page.next.url }}">&rarr;</a>
     {%- else -%}
       <span class="btn-toggle btn-post-nav is-disabled" aria-disabled="true">&rarr;</span>
     {%- endif -%}
@@ -48,6 +48,50 @@ layout: default
       if (vocab && vocab.parentNode) {
         vocab.parentNode.insertBefore(nav, vocab);
       }
+
+      const shouldIgnoreShortcuts = (target) => {
+        if (!target) return false;
+        const tag = target.tagName;
+        return target.isContentEditable || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+      };
+
+      document.addEventListener('keydown', function (e) {
+        if (e.altKey || e.ctrlKey || e.metaKey || shouldIgnoreShortcuts(e.target)) return;
+
+        const prevLink = document.getElementById('post-nav-prev');
+        const nextLink = document.getElementById('post-nav-next');
+        const title = document.getElementById('post-title');
+        const vocabDetails = document.querySelector('.vocab-list-container details');
+
+        if (e.key === 'ArrowLeft' && prevLink) {
+          e.preventDefault();
+          window.location.href = prevLink.href;
+          return;
+        }
+
+        if (e.key === 'ArrowRight' && nextLink) {
+          e.preventDefault();
+          window.location.href = nextLink.href;
+          return;
+        }
+
+        if (e.key === '1' && title) {
+          e.preventDefault();
+          title.click();
+          return;
+        }
+
+        if (e.key === '2' && typeof window.toggleFurigana === 'function') {
+          e.preventDefault();
+          window.toggleFurigana();
+          return;
+        }
+
+        if (e.key === '3' && vocabDetails) {
+          e.preventDefault();
+          vocabDetails.open = !vocabDetails.open;
+        }
+      });
     });
   </script>
 
