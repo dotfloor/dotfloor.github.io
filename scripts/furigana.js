@@ -22,14 +22,36 @@ function computeRomaji(reading) {
     return wanakana.toRomaji(reading, { convertLongVowelMark: true, upcaseKatakana: false });
 }
 
+function normalizeJlpt(levels) {
+    if (!Array.isArray(levels)) return [];
+
+    const unique = Array.from(new Set(levels.filter(Boolean).map(l => String(l).toLowerCase())));
+    return unique.sort((a, b) => {
+        const aMatch = a.match(/^jlpt-n([1-5])$/);
+        const bMatch = b.match(/^jlpt-n([1-5])$/);
+        if (!aMatch && !bMatch) return a.localeCompare(b);
+        if (!aMatch) return 1;
+        if (!bMatch) return -1;
+
+        // Higher number is easier level, so show N5 before N1.
+        return Number(bMatch[1]) - Number(aMatch[1]);
+    });
+}
+
 // Fetch dictionary data
 async function getVocabData(word) {
     if (vocabCache[word]) {
         const cached = vocabCache[word];
         if (cached) {
+            const normalizedJlpt = normalizeJlpt(cached.jlpt || []);
             const recomputedRomaji = computeRomaji(cached.reading || "");
+            const jlptChanged = JSON.stringify(cached.jlpt || []) !== JSON.stringify(normalizedJlpt);
             if (cached.romaji !== recomputedRomaji) {
                 cached.romaji = recomputedRomaji;
+                cached.jlpt = normalizedJlpt;
+                saveCache();
+            } else if (jlptChanged) {
+                cached.jlpt = normalizedJlpt;
                 saveCache();
             }
         }
@@ -63,7 +85,7 @@ async function getVocabData(word) {
                 word: jp.word || word,
                 reading: jp.reading || "",
                 romaji: computeRomaji(jp.reading || ""),
-                jlpt: entry.jlpt || [],
+                jlpt: normalizeJlpt(entry.jlpt || []),
                 is_common: entry.is_common || false,
                 meanings: meanings,
                 pos: Array.from(pos)
@@ -120,9 +142,13 @@ async function getVocabData(word) {
             // 1. Extract vocab items and placeholder them
             const vocabQueries = [];
             for (let i = 0; i < vocabLists.length; i++) {
-                const items = Array.from(vocabLists[i].querySelectorAll("li")).map(li => li.textContent.trim());
+                const items = Array.from(vocabLists[i].querySelectorAll(":scope > ul > li")).map(li => li.textContent.trim());
                 vocabQueries.push(items);
-                vocabLists[i].innerHTML = ""; // Clear to prevent Kuroshiro from parsing it
+
+                // Only clear source markdown lists. If cards already exist, keep them untouched.
+                if (items.length > 0) {
+                    vocabLists[i].innerHTML = ""; // Clear to prevent Kuroshiro from parsing it
+                }
             }
 
             // 2. Process Main Article Furigana

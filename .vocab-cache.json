@@ -2,6 +2,7 @@
   "日記": {
     "word": "日記",
     "reading": "にっき",
+    "romaji": "nikki",
     "jlpt": [
       "jlpt-n4"
     ],
@@ -12,12 +13,12 @@
     ],
     "pos": [
       "Noun"
-    ],
-    "romaji": "nikki"
+    ]
   },
   "書く": {
     "word": "書く",
     "reading": "かく",
+    "romaji": "kaku",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -29,12 +30,12 @@
     "pos": [
       "Godan verb with 'ku' ending",
       "Transitive verb"
-    ],
-    "romaji": "kaku"
+    ]
   },
   "日本語": {
     "word": "日本語",
     "reading": "にほんご",
+    "romaji": "nihongo",
     "jlpt": [],
     "is_common": true,
     "meanings": [
@@ -43,12 +44,12 @@
     ],
     "pos": [
       "Noun"
-    ],
-    "romaji": "nihongo"
+    ]
   },
   "やる気": {
     "word": "やる気",
     "reading": "やるき",
+    "romaji": "yaruki",
     "jlpt": [],
     "is_common": true,
     "meanings": [
@@ -56,12 +57,12 @@
     ],
     "pos": [
       "Noun"
-    ],
-    "romaji": "yaruki"
+    ]
   },
   "タイプ": {
     "word": "タイプ",
     "reading": "タイプ",
+    "romaji": "taipu",
     "jlpt": [
       "jlpt-n4"
     ],
@@ -76,12 +77,12 @@
       "Noun",
       "Suru verb",
       "Transitive verb"
-    ],
-    "romaji": "taipu"
+    ]
   },
   "最近": {
     "word": "最近",
     "reading": "さいきん",
+    "romaji": "saikin",
     "jlpt": [
       "jlpt-n4"
     ],
@@ -94,12 +95,12 @@
       "Noun",
       "Noun which may take the genitive case particle 'no'",
       "Adverb (fukushi)"
-    ],
-    "romaji": "saikin"
+    ]
   },
   "話す": {
     "word": "話す",
     "reading": "はなす",
+    "romaji": "hanasu",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -112,12 +113,12 @@
     "pos": [
       "Godan verb with 'su' ending",
       "Transitive verb"
-    ],
-    "romaji": "hanasu"
+    ]
   },
   "学校": {
     "word": "学校",
     "reading": "がっこう",
+    "romaji": "gakkou",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -130,12 +131,12 @@
     "pos": [
       "Noun",
       "Place"
-    ],
-    "romaji": "gakkou"
+    ]
   },
   "嫌い": {
     "word": "嫌い",
     "reading": "きらい",
+    "romaji": "kirai",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -148,12 +149,12 @@
     "pos": [
       "Na-adjective (keiyodoshi)",
       "Noun"
-    ],
-    "romaji": "kirai"
+    ]
   },
   "顔": {
     "word": "顔",
     "reading": "かお",
+    "romaji": "kao",
     "jlpt": [],
     "is_common": true,
     "meanings": [
@@ -168,12 +169,34 @@
     ],
     "pos": [
       "Noun"
+    ]
+  },
+  "見る": {
+    "word": "見る",
+    "reading": "みる",
+    "romaji": "miru",
+    "jlpt": [
+      "jlpt-n5"
     ],
-    "romaji": "kao"
+    "is_common": true,
+    "meanings": [
+      "to see; to look; to watch; to view; to observe",
+      "to examine; to look over; to assess; to check; to judge",
+      "to look after; to attend to; to take care of; to keep an eye on",
+      "to experience; to meet with (misfortune, success, etc.)",
+      "to try ...; to have a go at ...; to give ... a try",
+      "to see (that) ...; to find (that) ..."
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Transitive verb",
+      "Auxiliary verb"
+    ]
   },
   "声": {
     "word": "声",
     "reading": "こえ",
+    "romaji": "koe",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -189,12 +212,35 @@
     ],
     "pos": [
       "Noun"
+    ]
+  },
+  "聞く": {
+    "word": "聞く",
+    "reading": "きく",
+    "romaji": "kiku",
+    "jlpt": [
+      "jlpt-n5"
     ],
-    "romaji": "koe"
+    "is_common": true,
+    "meanings": [
+      "to hear",
+      "to listen (e.g. to music)",
+      "to ask; to enquire; to query",
+      "to hear about; to hear of; to learn of",
+      "to follow (advice, order, etc.); to obey; to listen to; to comply with",
+      "to hear (e.g. a plea); to grant (a request); to accept (e.g. an argument); to give consideration to",
+      "to smell (esp. incense); to sample (a fragrance)",
+      "to taste (alcohol); to try"
+    ],
+    "pos": [
+      "Godan verb with 'ku' ending",
+      "Transitive verb"
+    ]
   },
   "生きる": {
     "word": "生きる",
     "reading": "いきる",
+    "romaji": "ikiru",
     "jlpt": [
       "jlpt-n4"
     ],
@@ -210,12 +256,12 @@
     "pos": [
       "Ichidan verb",
       "Intransitive verb"
-    ],
-    "romaji": "ikiru"
+    ]
   },
   "気にする": {
     "word": "気にする",
     "reading": "きにする",
+    "romaji": "kinisuru",
     "jlpt": [],
     "is_common": false,
     "meanings": [
@@ -224,12 +270,12 @@
     "pos": [
       "Expressions (phrases, clauses, etc.)",
       "Suru verb - included"
-    ],
-    "romaji": "kinisuru"
+    ]
   },
   "死ぬ": {
     "word": "死ぬ",
     "reading": "しぬ",
+    "romaji": "shinu",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -242,23 +288,12 @@
     "pos": [
       "Godan verb with 'nu' ending",
       "Intransitive verb"
-    ],
-    "romaji": "shinu"
-  },
-  "死にたい": {
-    "word": "死にたいほどの夜",
-    "reading": "",
-    "jlpt": [],
-    "is_common": false,
-    "meanings": [
-      "The Last Time I Committed Suicide"
-    ],
-    "pos": [],
-    "romaji": ""
+    ]
   },
   "場所": {
     "word": "場所",
     "reading": "ばしょ",
+    "romaji": "basho",
     "jlpt": [
       "jlpt-n4"
     ],
@@ -270,12 +305,12 @@
     ],
     "pos": [
       "Noun"
-    ],
-    "romaji": "basho"
+    ]
   },
   "ひどい": {
     "word": "酷い",
     "reading": "ひどい",
+    "romaji": "hidoi",
     "jlpt": [
       "jlpt-n4",
       "jlpt-n1"
@@ -289,12 +324,12 @@
     ],
     "pos": [
       "I-adjective (keiyoushi)"
-    ],
-    "romaji": "hidoi"
+    ]
   },
   "住む": {
     "word": "住む",
     "reading": "すむ",
+    "romaji": "sumu",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -305,30 +340,12 @@
     "pos": [
       "Godan verb with 'mu' ending",
       "Intransitive verb"
-    ],
-    "romaji": "sumu"
-  },
-  "いつか": {
-    "word": "５日",
-    "reading": "いつか",
-    "jlpt": [
-      "jlpt-n5"
-    ],
-    "is_common": true,
-    "meanings": [
-      "5th day of the month",
-      "five days",
-      "Itsuka"
-    ],
-    "pos": [
-      "Noun",
-      "Place"
-    ],
-    "romaji": "itsuka"
+    ]
   },
   "逃げる": {
     "word": "逃げる",
     "reading": "にげる",
+    "romaji": "nigeru",
     "jlpt": [
       "jlpt-n4"
     ],
@@ -343,12 +360,12 @@
     "pos": [
       "Ichidan verb",
       "Intransitive verb"
-    ],
-    "romaji": "nigeru"
+    ]
   },
   "ロープ": {
     "word": "ロープ",
     "reading": "ロープ",
+    "romaji": "roopu",
     "jlpt": [
       "jlpt-n1"
     ],
@@ -359,15 +376,15 @@
     ],
     "pos": [
       "Noun"
-    ],
-    "romaji": "roopu"
+    ]
   },
   "かける": {
     "word": "掛ける",
     "reading": "かける",
+    "romaji": "kakeru",
     "jlpt": [
-      "jlpt-n4",
-      "jlpt-n5"
+      "jlpt-n5",
+      "jlpt-n4"
     ],
     "is_common": true,
     "meanings": [
@@ -401,12 +418,12 @@
       "Ichidan verb",
       "Transitive verb",
       "Suffix"
-    ],
-    "romaji": "kakeru"
+    ]
   },
   "飛び込む": {
     "word": "飛び込む",
     "reading": "とびこむ",
+    "romaji": "tobikomu",
     "jlpt": [
       "jlpt-n2"
     ],
@@ -418,12 +435,12 @@
     "pos": [
       "Godan verb with 'mu' ending",
       "Intransitive verb"
-    ],
-    "romaji": "tobikomu"
+    ]
   },
   "くらい": {
     "word": "暗い",
     "reading": "くらい",
+    "romaji": "kurai",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -438,30 +455,28 @@
     ],
     "pos": [
       "I-adjective (keiyoushi)"
-    ],
-    "romaji": "kurai"
+    ]
   },
-  "見つける": {
-    "word": "見つける",
-    "reading": "みつける",
+  "橋": {
+    "word": "橋",
+    "reading": "はし",
+    "romaji": "hashi",
     "jlpt": [
-      "jlpt-n4",
-      "jlpt-n2"
+      "jlpt-n5"
     ],
     "is_common": true,
     "meanings": [
-      "to find; to discover; to come across; to spot; to catch (someone doing)",
-      "to be used to seeing; to be familiar with"
+      "bridge",
+      "Bridge"
     ],
     "pos": [
-      "Ichidan verb",
-      "Transitive verb"
-    ],
-    "romaji": "mitsukeru"
+      "Noun"
+    ]
   },
   "汚い": {
     "word": "汚い",
     "reading": "きたない",
+    "romaji": "kitanai",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -475,28 +490,50 @@
     ],
     "pos": [
       "I-adjective (keiyoushi)"
-    ],
-    "romaji": "kitanai"
+    ]
   },
-  "橋": {
-    "word": "橋",
-    "reading": "はし",
+  "体": {
+    "word": "体",
+    "reading": "からだ",
+    "romaji": "karada",
     "jlpt": [
-      "jlpt-n5"
+      "jlpt-n5",
+      "jlpt-n3",
+      "jlpt-n1"
     ],
     "is_common": true,
     "meanings": [
-      "bridge",
-      "Bridge"
+      "body",
+      "torso; trunk",
+      "build; physique; frame; figure",
+      "health; constitution"
     ],
     "pos": [
       "Noun"
+    ]
+  },
+  "見つける": {
+    "word": "見つける",
+    "reading": "みつける",
+    "romaji": "mitsukeru",
+    "jlpt": [
+      "jlpt-n4",
+      "jlpt-n2"
     ],
-    "romaji": "hashi"
+    "is_common": true,
+    "meanings": [
+      "to find; to discover; to come across; to spot; to catch (someone doing)",
+      "to be used to seeing; to be familiar with"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Transitive verb"
+    ]
   },
   "消える": {
     "word": "消える",
     "reading": "きえる",
+    "romaji": "kieru",
     "jlpt": [
       "jlpt-n5"
     ],
@@ -512,72 +549,165 @@
     "pos": [
       "Ichidan verb",
       "Intransitive verb"
-    ],
-    "romaji": "kieru"
+    ]
   },
-  "体": {
-    "word": "体",
-    "reading": "からだ",
+  "面白い": {
+    "word": "面白い",
+    "reading": "おもしろい",
+    "romaji": "omoshiroi",
     "jlpt": [
-      "jlpt-n3",
-      "jlpt-n1",
-      "jlpt-n5"
+      "jlpt-n5",
+      "jlpt-n1"
     ],
     "is_common": true,
     "meanings": [
-      "body",
-      "torso; trunk",
-      "build; physique; frame; figure",
-      "health; constitution"
+      "interesting; fascinating; intriguing; enthralling",
+      "amusing; funny; comical",
+      "enjoyable; fun; entertaining; pleasant; agreeable",
+      "good; satisfactory; favourable; desirable; encouraging"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
+  },
+  "アプリ": {
+    "word": "アプリ",
+    "reading": "アプリ",
+    "romaji": "apuri",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "app; application"
     ],
     "pos": [
       "Noun"
-    ],
-    "romaji": "karada"
+    ]
   },
-  "見る": {
-    "word": "見る",
-    "reading": "みる",
+  "一番": {
+    "word": "一番",
+    "reading": "いちばん",
+    "romaji": "ichiban",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "number one; first; first place",
+      "best; most",
+      "game; round; bout",
+      "as a test; as an experiment; by way of experiment; by way of trial; tentatively",
+      "song (e.g. in noh); piece",
+      "Ichiban"
+    ],
+    "pos": [
+      "Noun",
+      "Noun which may take the genitive case particle 'no'",
+      "Adverb (fukushi)",
+      "Place"
+    ]
+  },
+  "好き": {
+    "word": "好き",
+    "reading": "すき",
+    "romaji": "suki",
     "jlpt": [
       "jlpt-n5"
     ],
     "is_common": true,
     "meanings": [
-      "to see; to look; to watch; to view; to observe",
-      "to examine; to look over; to assess; to check; to judge",
-      "to look after; to attend to; to take care of; to keep an eye on",
-      "to experience; to meet with (misfortune, success, etc.)",
-      "to try ...; to have a go at ...; to give ... a try",
-      "to see (that) ...; to find (that) ..."
+      "liking; being fond of; to one's liking; to one's taste; preferred; favourite",
+      "liking (romantically); being in love with; beloved",
+      "faddism; eccentricity",
+      "as one likes; as it suits one",
+      "lecherous; lustful; salacious"
     ],
     "pos": [
-      "Ichidan verb",
-      "Transitive verb",
-      "Auxiliary verb"
-    ],
-    "romaji": "miru"
+      "Na-adjective (keiyodoshi)",
+      "Noun"
+    ]
   },
-  "聞く": {
-    "word": "聞く",
-    "reading": "きく",
+  "機械": {
+    "word": "機械",
+    "reading": "きかい",
+    "romaji": "kikai",
     "jlpt": [
-      "jlpt-n5"
+      "jlpt-n3",
+      "jlpt-n2"
     ],
     "is_common": true,
     "meanings": [
-      "to hear",
-      "to listen (e.g. to music)",
-      "to ask; to enquire; to query",
-      "to hear about; to hear of; to learn of",
-      "to follow (advice, order, etc.); to obey; to listen to; to comply with",
-      "to hear (e.g. a plea); to grant (a request); to accept (e.g. an argument); to give consideration to",
-      "to smell (esp. incense); to sample (a fragrance)",
-      "to taste (alcohol); to try"
+      "machine; mechanism",
+      "instrument; appliance; apparatus",
+      "Machine"
     ],
     "pos": [
-      "Godan verb with 'ku' ending",
-      "Transitive verb"
+      "Noun"
+    ]
+  },
+  "みたい": {
+    "word": "みたい",
+    "reading": "みたい",
+    "romaji": "mitai",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "-like; sort of; similar to; resembling"
     ],
-    "romaji": "kiku"
+    "pos": [
+      "Suffix",
+      "Na-adjective (keiyodoshi)"
+    ]
+  },
+  "感じ": {
+    "word": "感じ",
+    "reading": "かんじ",
+    "romaji": "kanji",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "feeling; sense; impression"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "穏やか": {
+    "word": "穏やか",
+    "reading": "おだやか",
+    "romaji": "odayaka",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "calm; quiet; gentle; peaceful; mild",
+      "moderate; reasonable; amicable"
+    ],
+    "pos": [
+      "Na-adjective (keiyodoshi)"
+    ]
+  },
+  "可愛い": {
+    "word": "可愛い",
+    "reading": "かわいい",
+    "romaji": "kawaii",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "cute; adorable; charming; lovely; pretty",
+      "dear; precious; darling; pet",
+      "innocent; childlike; childish; lovable",
+      "dainty; little; tiny",
+      "Kawaii"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
   }
 }
