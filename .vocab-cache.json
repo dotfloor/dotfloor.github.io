@@ -709,5 +709,222 @@
     "pos": [
       "I-adjective (keiyoushi)"
     ]
+  },
+  "昔": {
+    "word": "昔",
+    "reading": "むかし",
+    "romaji": "mukashi",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "the old days; the past; former times; a long time ago",
+      "the past ten years; the past decade"
+    ],
+    "pos": [
+      "Noun",
+      "Noun which may take the genitive case particle 'no'",
+      "Adverb (fukushi)"
+    ]
+  },
+  "自分": {
+    "word": "自分",
+    "reading": "じぶん",
+    "romaji": "jibun",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "myself; yourself; oneself; himself; herself",
+      "I; me",
+      "you"
+    ],
+    "pos": [
+      "Pronoun"
+    ]
+  },
+  "いる": {
+    "word": "居る",
+    "reading": "いる",
+    "romaji": "iru",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to be (of animate objects); to exist",
+      "to stay",
+      "to be ...-ing",
+      "to have ...-ed; to be ...-ed"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb",
+      "Auxiliary verb"
+    ]
+  },
+  "います": {
+    "word": "在す",
+    "reading": "います",
+    "romaji": "imasu",
+    "jlpt": [],
+    "is_common": false,
+    "meanings": [
+      "to be",
+      "to go; to come"
+    ],
+    "pos": [
+      "Yodan verb with 'su' ending (archaic)",
+      "Intransitive verb"
+    ]
+  },
+  "彼": {
+    "word": "彼",
+    "reading": "かれ",
+    "romaji": "kare",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "he; him",
+      "boyfriend"
+    ],
+    "pos": [
+      "Pronoun",
+      "Noun"
+    ]
+  },
+  "長い": {
+    "word": "長い",
+    "reading": "ながい",
+    "romaji": "nagai",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "long (distance, length)",
+      "long (time); protracted; prolonged"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
+  },
+  "間": {
+    "word": "間",
+    "reading": "あいだ",
+    "romaji": "aida",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "space (between); gap; interval; distance; stretch",
+      "period of time (during, while); duration; interval",
+      "between (two parties or things)",
+      "among (a group)",
+      "relations (between); relationship",
+      "midpoint; average; halfway; middle ground",
+      "due to; because of",
+      "Ma (negative space)"
+    ],
+    "pos": [
+      "Noun",
+      "Adverb (fukushi)",
+      "Conjunction"
+    ]
+  },
+  "今": {
+    "word": "今",
+    "reading": "いま",
+    "romaji": "ima",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "now; the present time; just now; soon; immediately",
+      "another; more"
+    ],
+    "pos": [
+      "Noun",
+      "Noun which may take the genitive case particle 'no'",
+      "Adverb (fukushi)"
+    ]
+  },
+  "肌": {
+    "word": "肌",
+    "reading": "はだ",
+    "romaji": "hada",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "skin",
+      "body (in the context of intimate bodily contact)",
+      "surface; grain (e.g. of wood); texture",
+      "disposition; temperament; character; type"
+    ],
+    "pos": [
+      "Noun",
+      "Noun, used as a suffix"
+    ]
+  },
+  "着る": {
+    "word": "着る",
+    "reading": "きる",
+    "romaji": "kiru",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to wear (from the shoulders down); to put on",
+      "to take (the blame, responsibility); to bear"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Transitive verb"
+    ]
+  },
+  "お母さん": {
+    "word": "お母さん",
+    "reading": "おかあさん",
+    "romaji": "okaasan",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "mother; mom; mum; ma",
+      "wife",
+      "you (of an elderly person older than the speaker); she; her"
+    ],
+    "pos": [
+      "Noun",
+      "Pronoun"
+    ]
+  },
+  "息子": {
+    "word": "息子",
+    "reading": "むすこ",
+    "romaji": "musuko",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "son",
+      "penis",
+      "Son"
+    ],
+    "pos": [
+      "Noun"
+    ]
   }
 }

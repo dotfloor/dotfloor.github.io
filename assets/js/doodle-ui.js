@@ -180,7 +180,7 @@
                     saveBtn.innerText = "Waiting for Jekyll reload...";
                     setTimeout(() => {
                         document.body.removeChild(modal); window.location.reload(true);
-                    }, 2000); // Give jekyll 2 seconds to see the new file and rebuild
+                    }, 3500); // Give jekyll enough time to see the new file and rebuild
                 } else {
                     alert("Failed to save doodle. Make sure server is running!");
                     saveBtn.innerText = "Save & Close"; saveBtn.disabled = false;
