@@ -926,5 +926,310 @@
     "pos": [
       "Noun"
     ]
+  },
+  "夢": {
+    "word": "夢",
+    "reading": "ゆめ",
+    "romaji": "yume",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "dream",
+      "dream; hope; wish; aspiration; ambition",
+      "unrealistic aspiration; daydream; pipe dream",
+      "delusion; illusion",
+      "fleeting thing; something short-lived",
+      "Dream"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "公園": {
+    "word": "公園",
+    "reading": "こうえん",
+    "romaji": "kouen",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "(public) park",
+      "Park"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "フクロウ": {
+    "word": "梟",
+    "reading": "ふくろう",
+    "romaji": "fukurou",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "owl (esp. the Ural owl, Strix uralensis)",
+      "Ural Owl"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "ある": {
+    "word": "有る",
+    "reading": "ある",
+    "romaji": "aru",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3",
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to be; to exist; to live",
+      "to have",
+      "to be located",
+      "to be equipped with",
+      "to happen; to come about",
+      "to exist (in a completed state); to be (something unchanged in its current state)"
+    ],
+    "pos": [
+      "Godan verb with 'ru' ending (irregular verb)",
+      "Intransitive verb",
+      "Auxiliary verb"
+    ]
+  },
+  "猫": {
+    "word": "猫",
+    "reading": "ねこ",
+    "romaji": "neko",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "cat (esp. the domestic cat, Felis catus); feline",
+      "shamisen",
+      "geisha",
+      "wheelbarrow",
+      "clay bed-warmer",
+      "bottom (submissive partner of a homosexual relationship)",
+      "Cat"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "間違える": {
+    "word": "間違える",
+    "reading": "まちがえる",
+    "romaji": "machigaeru",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to make a mistake (in); to commit an error; to get wrong; to do incorrectly",
+      "to mistake (one thing for another); to confuse"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Transitive verb"
+    ]
+  },
+  "有る": {
+    "word": "有る",
+    "reading": "ある",
+    "romaji": "aru",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3",
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to be; to exist; to live",
+      "to have",
+      "to be located",
+      "to be equipped with",
+      "to happen; to come about",
+      "to exist (in a completed state); to be (something unchanged in its current state)"
+    ],
+    "pos": [
+      "Godan verb with 'ru' ending (irregular verb)",
+      "Intransitive verb",
+      "Auxiliary verb"
+    ]
+  },
+  "居る": {
+    "word": "居る",
+    "reading": "いる",
+    "romaji": "iru",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to be (of animate objects); to exist",
+      "to stay",
+      "to be ...-ing",
+      "to have ...-ed; to be ...-ed"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb",
+      "Auxiliary verb"
+    ]
+  },
+  "疲れる": {
+    "word": "疲れる",
+    "reading": "つかれる",
+    "romaji": "tsukareru",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to get tired; to tire; to get fatigued; to become exhausted; to grow weary",
+      "to become worn out (of a well-used object)",
+      "to starve"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb"
+    ]
+  },
+  "": null,
+  "座る": {
+    "word": "座る",
+    "reading": "すわる",
+    "romaji": "suwaru",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to sit (down); to have a seat; to be seated; to kneel (on the floor)",
+      "to assume (a position); to take on (a duty); to occupy (a post)"
+    ],
+    "pos": [
+      "Godan verb with 'ru' ending",
+      "Intransitive verb"
+    ]
+  },
+  "探す": {
+    "word": "探す",
+    "reading": "さがす",
+    "romaji": "sagasu",
+    "jlpt": [
+      "jlpt-n4",
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to search for; to look for; to hunt for; to seek",
+      "to search (a house, pocket, etc.); to search through; to rummage in (e.g. a drawer); to fish around"
+    ],
+    "pos": [
+      "Godan verb with 'su' ending",
+      "Transitive verb"
+    ]
+  },
+  "寝る": {
+    "word": "寝る",
+    "reading": "ねる",
+    "romaji": "neru",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to sleep (lying down)",
+      "to go to bed; to lie in bed",
+      "to lie down",
+      "to sleep (with someone, i.e. have intercourse)",
+      "to lie flat (e.g. of hair)",
+      "to lie idle (of funds, stock, etc.)",
+      "to ferment (of soy sauce, miso, etc.)"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb"
+    ]
+  },
+  "時間": {
+    "word": "時間",
+    "reading": "じかん",
+    "romaji": "jikan",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "time",
+      "hour",
+      "period; class; lesson",
+      "Time"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "短い": {
+    "word": "短い",
+    "reading": "みじかい",
+    "romaji": "mijikai",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "short",
+      "brief"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
+  },
+  "変": {
+    "word": "変",
+    "reading": "へん",
+    "romaji": "hen",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "strange; odd; peculiar; weird; curious; eccentric; funny; suspicious; fishy",
+      "unexpected",
+      "change",
+      "incident; disturbance; disaster; accident; emergency",
+      "flat"
+    ],
+    "pos": [
+      "Na-adjective (keiyodoshi)",
+      "Noun",
+      "Noun, used as a prefix"
+    ]
+  },
+  "脱出": {
+    "word": "脱出",
+    "reading": "だっしゅつ",
+    "romaji": "dasshutsu",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "escape; getting away (from); getting out (of)",
+      "prolapse; proptosis"
+    ],
+    "pos": [
+      "Noun",
+      "Suru verb",
+      "Intransitive verb"
+    ]
   }
 }
