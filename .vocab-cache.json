@@ -1231,5 +1231,246 @@
       "Suru verb",
       "Intransitive verb"
     ]
+  },
+  "良く": {
+    "word": "良く",
+    "reading": "よく",
+    "romaji": "yoku",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "nicely; properly; well; skillfully; skilfully",
+      "frequently; often",
+      "I'm glad that you ...; thank you for ...",
+      "(you have) quite the nerve to; I don't know how you can ..."
+    ],
+    "pos": [
+      "Adverb (fukushi)"
+    ]
+  },
+  "考える": {
+    "word": "考える",
+    "reading": "かんがえる",
+    "romaji": "kangaeru",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to think (about, of); to think over; to ponder; to contemplate; to reflect (on); to meditate (on)",
+      "to consider; to bear in mind; to allow for; to take into consideration",
+      "to think (that); to believe; to hold (a view); to judge; to conclude; to suspect",
+      "to intend (to do); to think of (doing); to plan",
+      "to predict; to anticipate; to expect; to imagine",
+      "to come up with; to think up; to contrive; to devise",
+      "to consider (as); to regard (as); to look on (as); to take; to view"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Transitive verb"
+    ]
+  },
+  "出来る": {
+    "word": "出来る",
+    "reading": "できる",
+    "romaji": "dekiru",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to be able to do; to be possible; to be permitted (to do)",
+      "to be good at; to do well; to be proficient (in); to be capable",
+      "to come into existence; to form; to appear; to come up (of a matter); to be born; to make (a friend); to get (a girlfriend, free time, etc.)",
+      "to be made; to be built; to be constructed; to be formed; to be established; to be set up",
+      "to be finished; to be completed; to be done; to be ready",
+      "to grow (of a crop); to be produced",
+      "to be mature and well-balanced; to be of fine character",
+      "to be by nature; to be born ...",
+      "to become (sexually) involved (with); to become intimate (with); to take up (with someone)",
+      "to get pregnant"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb"
+    ]
+  },
+  "沢山": {
+    "word": "沢山",
+    "reading": "たくさん",
+    "romaji": "takusan",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "a lot; lots; plenty; many; a large number; much; a great deal; a good deal",
+      "enough; sufficient",
+      "enough; too many; too much"
+    ],
+    "pos": [
+      "Noun which may take the genitive case particle 'no'",
+      "Na-adjective (keiyodoshi)",
+      "Noun",
+      "Adverb (fukushi)",
+      "Noun, used as a suffix"
+    ]
+  },
+  "歩く": {
+    "word": "歩く",
+    "reading": "あるく",
+    "romaji": "aruku",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to walk"
+    ],
+    "pos": [
+      "Godan verb with 'ku' ending",
+      "Intransitive verb"
+    ]
+  },
+  "感じる": {
+    "word": "感じる",
+    "reading": "かんじる",
+    "romaji": "kanjiru",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to feel; to sense; to experience",
+      "to be moved (by); to be touched (by); to be impressed (by); to respond (to)",
+      "to become infected with (an illness); to catch"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Transitive verb",
+      "Intransitive verb"
+    ]
+  },
+  "空": {
+    "word": "空",
+    "reading": "そら",
+    "romaji": "sora",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "sky; the air; the heavens",
+      "weather",
+      "far-off place; distant place",
+      "state of mind; feeling",
+      "(from) memory; (by) heart",
+      "falsehood; lie",
+      "somehow; vaguely",
+      "fake"
+    ],
+    "pos": [
+      "Noun",
+      "Noun, used as a prefix"
+    ]
+  },
+  "落ちる": {
+    "word": "落ちる",
+    "reading": "おちる",
+    "romaji": "ochiru",
+    "jlpt": [
+      "jlpt-n4",
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to fall; to drop; to come down; to crash; to collapse; to cave in; to give way",
+      "to set (of the sun or moon); to sink; to dip; to go down",
+      "to decrease (of popularity, quality, speed, sales, etc.); to fall; to drop; to go down; to decline; to deteriorate; to abate (of wind)",
+      "to be inferior (to); to be not as good (as); to fall short (of)",
+      "to come off (of dirt, paint, makeup, etc.); to come out (of a stain); to fade (of colour); to be removed (of an illness, possessing spirit, etc.)",
+      "to disappear (of excess fat); to become thinner; to become leaner",
+      "to be left out; to be omitted; to be missing",
+      "to fail (an exam); to lose (a contest, election, etc.); to be unsuccessful",
+      "to decline (of morals, character, etc.); to become vulgar (e.g. of a conversation); to stoop (to); to sink (so low)",
+      "to be ruined; to go under; to fall (into hell)",
+      "to fall (in love, asleep, etc.)",
+      "to fall (into someone's hands); to be accepted (of a bid); to be won (of a tender); to be honoured (of a bill)",
+      "to fall into (a trap); to fall for (a trick)",
+      "to give in",
+      "to confess; to own up",
+      "to come to (a conclusion, topic, etc.); to arrive at (in the end)",
+      "to leave (a city, castle, etc.); to (be defeated and) flee",
+      "to sink in; to be accepted (in one's heart)",
+      "to fall (to the enemy); to be defeated",
+      "to come in (of money)",
+      "to fall (upon; of light, a shadow, one's gaze, etc.)",
+      "to pass out (in judo); to fall unconscious",
+      "to go down (of a website, server, etc.); to crash",
+      "to log out (of an online game, chat room, etc.); to drop out; to leave; to go offline",
+      "to move to deeper water (of a fish in cold weather)",
+      "to die (of an animal)"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb"
+    ]
+  },
+  "動く": {
+    "word": "動く",
+    "reading": "うごく",
+    "romaji": "ugoku",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to move; to stir; to shift; to shake; to swing",
+      "to operate; to run; to go; to work",
+      "to make a move; to take action; to act; to go into action",
+      "to be touched; to be influenced",
+      "to change; to vary; to fluctuate; to waver",
+      "to be transferred"
+    ],
+    "pos": [
+      "Godan verb with 'ku' ending",
+      "Intransitive verb"
+    ]
+  },
+  "映画": {
+    "word": "映画",
+    "reading": "えいが",
+    "romaji": "eiga",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "movie; film; motion picture",
+      "Film"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "似る": {
+    "word": "似る",
+    "reading": "にる",
+    "romaji": "niru",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to resemble; to look like; to be like; to be alike; to be similar; to take after"
+    ],
+    "pos": [
+      "Ichidan verb",
+      "Intransitive verb"
+    ]
   }
 }
