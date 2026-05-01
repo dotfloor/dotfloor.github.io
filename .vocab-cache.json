@@ -1472,5 +1472,156 @@
       "Ichidan verb",
       "Intransitive verb"
     ]
+  },
+  "良い": {
+    "word": "良い",
+    "reading": "よい",
+    "romaji": "yoi",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3",
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "good; excellent; fine; nice; pleasant; agreeable",
+      "sufficient; enough; ready; prepared",
+      "profitable (deal, business offer, etc.); beneficial",
+      "OK; all right; fine; no problem",
+      "easy to ..."
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)",
+      "Suffix"
+    ]
+  },
+  "思い出": {
+    "word": "思い出",
+    "reading": "おもいで",
+    "romaji": "omoide",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "memories; recollections; reminiscence"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "心地よい": {
+    "word": "心地よい",
+    "reading": "ここちよい",
+    "romaji": "kokochiyoi",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "comfortable; pleasant"
+    ],
+    "pos": [
+      "Expressions (phrases, clauses, etc.)",
+      "I-Adjective (keiyoushi) - yoi/ii class"
+    ]
+  },
+  "違い": {
+    "word": "違い",
+    "reading": "ちがい",
+    "romaji": "chigai",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "difference; distinction; discrepancy",
+      "mistake; error"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "読み": {
+    "word": "読み",
+    "reading": "よみ",
+    "romaji": "yomi",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "reading",
+      "reading (of a kanji, esp. kun reading)",
+      "reading (e.g. of a situation); insight; judgment; interpretation; prediction; calculation"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "読む": {
+    "word": "読む",
+    "reading": "よむ",
+    "romaji": "yomu",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to read",
+      "to recite (e.g. a sutra); to chant",
+      "to predict; to guess; to forecast; to read (someone's thoughts); to see (e.g. into someone's heart); to divine",
+      "to pronounce; to read (e.g. a kanji)",
+      "to decipher; to read (a meter, graph, music, etc.); to tell (the time)",
+      "to count; to estimate",
+      "to read (a kanji) with its native Japanese reading"
+    ],
+    "pos": [
+      "Godan verb with 'mu' ending",
+      "Transitive verb"
+    ]
+  },
+  "なる": {
+    "word": "成る",
+    "reading": "なる",
+    "romaji": "naru",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to become; to get; to grow; to turn; to reach; to attain",
+      "to result in; to turn out; to end up; to prove (to be)",
+      "to consist of; to be composed of; to be made up of",
+      "to be completed; to be realized; to succeed; to be attained; to be accomplished",
+      "to change (into); to turn (into); to transform",
+      "to come (to do); to begin (to do); to grow (to do)",
+      "to come to; to amount to; to add up to; to make",
+      "to play (the part of); to act as",
+      "to be used for; to be useful for; to serve as",
+      "to be promoted",
+      "to do ...",
+      "Naru"
+    ],
+    "pos": [
+      "Godan verb with 'ru' ending",
+      "Intransitive verb",
+      "Auxiliary verb",
+      "Place"
+    ]
+  },
+  "見やすい": {
+    "word": "見やすい",
+    "reading": "みやすい",
+    "romaji": "miyasui",
+    "jlpt": [],
+    "is_common": false,
+    "meanings": [
+      "easy to see; easy to read",
+      "easy to understand",
+      "easy to look at; attractive"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
   }
 }
