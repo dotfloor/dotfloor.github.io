@@ -1623,5 +1623,387 @@
     "pos": [
       "I-adjective (keiyoushi)"
     ]
+  },
+  "持つ": {
+    "word": "持つ",
+    "reading": "もつ",
+    "romaji": "motsu",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to hold (in one's hand); to take; to carry",
+      "to possess; to have; to own",
+      "to maintain; to keep",
+      "to last; to be durable; to keep; to survive",
+      "to take charge of; to be in charge of",
+      "to hold (meeting, etc.); to have (opportunity, etc.)",
+      "to have \"it\"; to have that special something; to be blessed with good luck"
+    ],
+    "pos": [
+      "Godan verb with 'tsu' ending",
+      "Transitive verb",
+      "Intransitive verb"
+    ]
+  },
+  "消防車": {
+    "word": "消防車",
+    "reading": "しょうぼうしゃ",
+    "romaji": "shoubousha",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "fire engine; fire truck"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "想い": {
+    "word": "思い",
+    "reading": "おもい",
+    "romaji": "omoi",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "thought",
+      "imagination; mind; heart",
+      "desire; wish; hope; expectation",
+      "love; affection",
+      "feelings; emotion; sentiment; experience"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "出す": {
+    "word": "出す",
+    "reading": "だす",
+    "romaji": "dasu",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to take out; to get out",
+      "to put out; to reveal; to show",
+      "to submit (e.g. thesis); to turn in",
+      "to publish; to make public",
+      "to send (e.g. letter)",
+      "to produce (a sound); to start (fire)",
+      "to serve (food)",
+      "... out (e.g. to jump out, to carry out)",
+      "to begin ...; to start to ...; to burst into ..."
+    ],
+    "pos": [
+      "Godan verb with 'su' ending",
+      "Transitive verb",
+      "Suffix"
+    ]
+  },
+  "数日": {
+    "word": "数日",
+    "reading": "すうじつ",
+    "romaji": "suujitsu",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "few days"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "前": {
+    "word": "前",
+    "reading": "ぜん",
+    "romaji": "zen",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "last (i.e. immediately preceding); previous; ex-; former",
+      "pre- (e.g. premodern)",
+      "before",
+      "before; earlier"
+    ],
+    "pos": [
+      "Noun, used as a prefix",
+      "Noun, used as a suffix",
+      "Noun",
+      "Adverb (fukushi)"
+    ]
+  },
+  "まえ": {
+    "word": "前",
+    "reading": "まえ",
+    "romaji": "mae",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "in front (of); before (e.g. a building)",
+      "before; earlier; previously; prior; ago; (minutes) to (the hour)",
+      "(the) front; frontal part; fore; head (e.g. of a line)",
+      "forward; ahead",
+      "(in the) presence (of); in front (of someone)",
+      "previous (e.g. page); prior (e.g. engagement); first (e.g. half); former (e.g. example)",
+      "portion; helping",
+      "front (of one's body or clothing); breast (of a coat, kimono, etc.)",
+      "privates; private parts",
+      "criminal record; previous conviction; (a) prior"
+    ],
+    "pos": [
+      "Noun",
+      "Noun which may take the genitive case particle 'no'",
+      "Adverb (fukushi)",
+      "Suffix"
+    ]
+  },
+  "故郷": {
+    "word": "故郷",
+    "reading": "ふるさと",
+    "romaji": "furusato",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "hometown; birthplace; native place; one's old home",
+      "ruins; historic remains"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "馴染み深い": {
+    "word": "馴染み深い",
+    "reading": "なじみぶかい",
+    "romaji": "najimibukai",
+    "jlpt": [],
+    "is_common": false,
+    "meanings": [
+      "(very) familiar; well-acquainted"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
+  },
+  "道": {
+    "word": "道",
+    "reading": "みち",
+    "romaji": "michi",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "road; path; street; lane; passage",
+      "route; way",
+      "distance; journey",
+      "road (e.g. to victory); course",
+      "way (of living, proper conduct, etc.); moral principles",
+      "teachings (esp. Confucian or Buddhist); dogma",
+      "field (e.g. of medicine); subject; speciality",
+      "means; way; method",
+      "Diameter"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "こきょう": {
+    "word": "故郷",
+    "reading": "こきょう",
+    "romaji": "kokyou",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "hometown; birthplace; native place; one's old home"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "姪": {
+    "word": "姪",
+    "reading": "めい",
+    "romaji": "mei",
+    "jlpt": [
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "niece"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "彼女": {
+    "word": "彼女",
+    "reading": "かのじょ",
+    "romaji": "kanojo",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "she; her",
+      "girlfriend"
+    ],
+    "pos": [
+      "Pronoun",
+      "Noun"
+    ]
+  },
+  "手": {
+    "word": "手",
+    "reading": "て",
+    "romaji": "te",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "hand; arm",
+      "forepaw; foreleg",
+      "handle",
+      "hand; worker; help",
+      "trouble; care; effort",
+      "means; way; trick; move; technique; workmanship",
+      "hand; handwriting",
+      "kind; type; sort",
+      "one's hands; one's possession",
+      "ability to cope",
+      "hand (of cards)",
+      "direction",
+      "move (in go, shogi, etc.)",
+      "Te",
+      "Hand"
+    ],
+    "pos": [
+      "Noun",
+      "Noun, used as a suffix",
+      "Counter",
+      "Place"
+    ]
+  },
+  "握る": {
+    "word": "握る",
+    "reading": "にぎる",
+    "romaji": "nigiru",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to clasp; to grasp; to grip; to clutch",
+      "to hold (the answer); to have (e.g. the solution); to be the key; to be the reason",
+      "to seize (power); to hold (the reins); to dominate; to control",
+      "to make (nigirizushi, rice ball, etc.); to form (with one's hands); to press into shape; to mold; to mould"
+    ],
+    "pos": [
+      "Godan verb with 'ru' ending",
+      "Transitive verb"
+    ]
+  },
+  "建物": {
+    "word": "建物",
+    "reading": "たてもの",
+    "romaji": "tatemono",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "building"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "どれか": {
+    "word": "どれか",
+    "reading": "どれか",
+    "romaji": "doreka",
+    "jlpt": [],
+    "is_common": false,
+    "meanings": [
+      "which one",
+      "one of; any of"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "突っ込む": {
+    "word": "突っ込む",
+    "reading": "つっこむ",
+    "romaji": "tsukkomu",
+    "jlpt": [
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to thrust (something) into (something); to cram; to stuff; to shove",
+      "to plunge into; to charge into; to rush into; to ram into; to crash into",
+      "to delve into (a matter); to go into depth; to get to the heart (of something)",
+      "to press (someone) about; to point out (e.g. an inconsistency); to question sharply; to grill",
+      "to get involved with; to meddle in; to poke one's nose into",
+      "to riposte; to retort; to quip"
+    ],
+    "pos": [
+      "Godan verb with 'mu' ending",
+      "Transitive verb",
+      "Intransitive verb"
+    ]
+  },
+  "まるで": {
+    "word": "丸で",
+    "reading": "まるで",
+    "romaji": "marude",
+    "jlpt": [
+      "jlpt-n3",
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "as if; as though; just like; much as; exactly like; as it were",
+      "(not) at all; (not) in the slightest; (not) a bit",
+      "really; completely; entirely; wholly; truly; quite"
+    ],
+    "pos": [
+      "Adverb (fukushi)"
+    ]
+  },
+  "飛ぶ": {
+    "word": "飛ぶ",
+    "reading": "とぶ",
+    "romaji": "tobu",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n2"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to fly; to soar",
+      "to jump; to leap; to spring; to bound; to hop",
+      "to spatter; to scatter; to splash; to fly (e.g. of sparks)",
+      "to hurry; to rush",
+      "to flee; to run off; to escape",
+      "to disappear; to vanish; to fade; to thin out",
+      "to break off; to come off; to fall off; to blow (of a fuse)",
+      "to be sent out (of an order); to fly (of false rumours, catcalls, etc.)",
+      "to come flying (of a punch, kick, etc.)",
+      "to be missing (of a page, stitch, etc.); to skip; to jump (e.g. of a conversation)"
+    ],
+    "pos": [
+      "Godan verb with 'bu' ending",
+      "Intransitive verb"
+    ]
   }
 }
