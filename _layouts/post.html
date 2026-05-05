@@ -9,20 +9,11 @@ layout: default
   
   <h1 id="post-title" aria-hidden="true">{{ page.title }}</h1>
 
-  <button class="btn-toggle" id="furigana-toggle" onclick="toggleFurigana()" style="align-self: flex-start;">ふりがな: オン</button>
-  <script>
-    function toggleFurigana() {
-      const isHidden = document.body.classList.toggle('hide-furigana');
-      const btn = document.getElementById('furigana-toggle');
-      btn.innerText = isHidden ? 'ふりがな: オフ' : 'ふりがな: オン';
-      localStorage.setItem('hide-furigana', isHidden);
-    }
-    // Restore preference on load
-    if (localStorage.getItem('hide-furigana') === 'true') {
-      document.body.classList.add('hide-furigana');
-      document.getElementById('furigana-toggle').innerText = 'ふりがな: オフ';
-    }
-  </script>
+  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+    <button class="btn-toggle" id="furigana-toggle" onclick="toggleFurigana()" style="margin: 0;">ふりがな: オン</button>
+    <button class="btn-toggle" id="romaji-toggle" onclick="toggleRomaji()" style="margin: 0;">ローマ字: オン</button>
+  </div>
+
 
   {{ content }}
 
@@ -39,90 +30,99 @@ layout: default
       <span class="btn-toggle btn-post-nav is-disabled" aria-disabled="true">&rarr;</span>
     {%- endif -%}
   </nav>
-  <script>
-    // Place post navigation directly above vocabulary when present.
-    document.addEventListener('DOMContentLoaded', function () {
-      const nav = document.getElementById('post-nav-row');
-      const vocab = document.querySelector('.vocab-list-container');
-      if (!nav) return;
-      if (vocab && vocab.parentNode) {
-        vocab.parentNode.insertBefore(nav, vocab);
+</article>
+
+<script>
+  function toggleFurigana() {
+    const isHidden = document.body.classList.toggle('hide-furigana');
+    const btn = document.getElementById('furigana-toggle');
+    btn.innerText = isHidden ? 'ふりがな: オフ' : 'ふりがな: オン';
+    localStorage.setItem('hide-furigana', isHidden);
+  }
+  function toggleRomaji() {
+    const isHidden = document.body.classList.toggle('hide-romaji');
+    const btn = document.getElementById('romaji-toggle');
+    btn.innerText = isHidden ? 'ローマ字: オフ' : 'ローマ字: オン';
+    localStorage.setItem('hide-romaji', isHidden);
+  }
+  // Restore preference on load
+  if (localStorage.getItem('hide-furigana') === 'true') {
+    document.body.classList.add('hide-furigana');
+    document.getElementById('furigana-toggle').innerText = 'ふりがな: オフ';
+  }
+  if (localStorage.getItem('hide-romaji') === 'true') {
+    document.body.classList.add('hide-romaji');
+    document.getElementById('romaji-toggle').innerText = 'ローマ字: オフ';
+  }
+
+  // Place post navigation directly above vocabulary when present.
+  document.addEventListener('DOMContentLoaded', function () {
+    const nav = document.getElementById('post-nav-row');
+    const vocab = document.querySelector('.vocab-list-container');
+    if (!nav) return;
+    if (vocab && vocab.parentNode) {
+      vocab.parentNode.insertBefore(nav, vocab);
+    }
+
+    const shouldIgnoreShortcuts = (target) => {
+      if (!target) return false;
+      const tag = target.tagName;
+      return target.isContentEditable || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+    };
+
+    document.addEventListener('keydown', function (e) {
+      if (e.altKey || e.ctrlKey || e.metaKey || shouldIgnoreShortcuts(e.target)) return;
+
+      const prevLink = document.getElementById('post-nav-prev');
+      const nextLink = document.getElementById('post-nav-next');
+      const title = document.getElementById('post-title');
+      const vocabDetails = document.querySelector('.vocab-list-container details');
+
+      if (e.key === 'ArrowLeft' && prevLink) {
+        e.preventDefault();
+        window.location.href = prevLink.href;
+        return;
       }
 
-      const shouldIgnoreShortcuts = (target) => {
-        if (!target) return false;
-        const tag = target.tagName;
-        return target.isContentEditable || tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
-      };
+      if (e.key === 'ArrowRight' && nextLink) {
+        e.preventDefault();
+        window.location.href = nextLink.href;
+        return;
+      }
 
-      document.addEventListener('keydown', function (e) {
-        if (e.altKey || e.ctrlKey || e.metaKey || shouldIgnoreShortcuts(e.target)) return;
+      if (e.key === '1' && title) {
+        e.preventDefault();
+        title.click();
+        return;
+      }
 
-        const prevLink = document.getElementById('post-nav-prev');
-        const nextLink = document.getElementById('post-nav-next');
-        const title = document.getElementById('post-title');
-        const vocabDetails = document.querySelector('.vocab-list-container details');
+      if (e.key === '2' && typeof window.toggleFurigana === 'function') {
+        e.preventDefault();
+        window.toggleFurigana();
+        return;
+      }
 
-        if (e.key === 'ArrowLeft' && prevLink) {
-          e.preventDefault();
-          window.location.href = prevLink.href;
-          return;
-        }
+      if (e.key === '3' && vocabDetails) {
+        e.preventDefault();
+        vocabDetails.open = !vocabDetails.open;
+        return;
+      }
 
-        if (e.key === 'ArrowRight' && nextLink) {
-          e.preventDefault();
-          window.location.href = nextLink.href;
-          return;
-        }
+      if (e.key === '4' && typeof window.toggleRomaji === 'function') {
+        e.preventDefault();
+        window.toggleRomaji();
+        return;
+      }
 
-        if (e.key === '1' && title) {
-          e.preventDefault();
-          title.click();
-          return;
-        }
-
-        if (e.key === '2' && typeof window.toggleFurigana === 'function') {
-          e.preventDefault();
-          window.toggleFurigana();
-          return;
-        }
-
-        if (e.key === '3' && vocabDetails) {
-          e.preventDefault();
-          vocabDetails.open = !vocabDetails.open;
-          return;
-        }
-
-        if (e.key === '4') {
-          const posSections = Array.from(document.querySelectorAll('details.dict-pos'));
-          if (posSections.length === 0) return;
-          e.preventDefault();
-          const shouldOpenAll = posSections.some(section => !section.open);
-          posSections.forEach(section => {
-            section.open = shouldOpenAll;
-          });
-        }
-      });
+      if (e.key === '5') {
+        const posSections = Array.from(document.querySelectorAll('details.dict-pos'));
+        if (posSections.length === 0) return;
+        e.preventDefault();
+        const shouldOpenAll = posSections.some(section => !section.open);
+        posSections.forEach(section => {
+          section.open = shouldOpenAll;
+        });
+      }
     });
-  </script>
-
-  <!-- {%- if page.comments != false -%}
-  <div class="post-comments">
-    <script src="https://giscus.app/client.js"
-            data-repo="dotfloor/dotfloor.github.io"
-            data-repo-id="R_kgDOSG-Ulw"
-            data-category="General"
-            data-category-id="DIC_kwDOSG-Ul84C7OEC"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="dark"
-            data-lang="en"
-            crossorigin="anonymous"
-            async>
-    </script>
-  </div>
-  {%- endif -%} -->
-</article>
+  });
+</script>

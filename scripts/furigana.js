@@ -151,12 +151,47 @@ async function getVocabData(word) {
                 }
             }
 
-            // 2. Process Main Article Furigana
+            // 2. Process Main Article Furigana and Romaji
             for (const article of articles) {
                 let contentHTML = article.innerHTML;
 
-                // Pre-process `[Kanji:Furigana]` shorthand before anything else
-                contentHTML = contentHTML.replace(/\[([^\]:]+):([^\]]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>");
+                // First, generate Romaji for paragraphs
+                const domArticle = new JSDOM(contentHTML).window.document.body;
+                const paragraphs = Array.from(domArticle.querySelectorAll('p'));
+                for (const p of paragraphs) {
+                    if (p.closest('.vocab-list-container')) continue;
+                    
+                    let pHTML = p.innerHTML;
+                    // Extract manual overrides for Romaji
+                    let romajiSourceText = pHTML;
+                    // Extract custom overrides [Kanji:Furigana:Romaji]
+                    romajiSourceText = romajiSourceText.replace(/\[([^\]:]+):([^\]:]+):([^\]]+)\]/g, "$3");
+                    // Fallback [Kanji:Furigana] to furigana
+                    romajiSourceText = romajiSourceText.replace(/\[([^\]:]+):([^\]]+)\]/g, "$2");
+                    
+                    const tempDiv = domArticle.ownerDocument.createElement('div');
+                    tempDiv.innerHTML = romajiSourceText;
+                    let plainText = tempDiv.textContent.trim();
+                    
+                    if (plainText.length > 0 && /[ぁ-んァ-ン一-龯]/.test(plainText)) { // Only if it has Japanese characters
+                        let romajiText = await kuroshiro.convert(plainText, { mode: "spaced", to: "romaji" });
+                        
+                        // Clean up punctuation spacing
+                        romajiText = romajiText.replace(/\s+([.,!?])/g, '$1');
+                        
+                        // Append romaji span to the paragraph
+                        const romajiSpan = domArticle.ownerDocument.createElement('span');
+                        romajiSpan.className = 'paragraph-romaji';
+                        romajiSpan.textContent = romajiText;
+                        p.appendChild(romajiSpan);
+                    }
+                }
+                
+                contentHTML = domArticle.innerHTML; // Update with the injected romaji spans
+
+                // Now do the Furigana replacement globally
+                // Pre-process `[Kanji:Furigana:Romaji]` and `[Kanji:Furigana]` shorthand
+                contentHTML = contentHTML.replace(/\[([^\]:]+):([^\]:]+)(?::([^\]]+))?\]/g, "<ruby>$1<rt>$2</rt></ruby>");
 
                 // Protect manually-written <ruby> tags by replacing them with temporary tokens
                 const rubyPlaceholders = [];
@@ -165,9 +200,19 @@ async function getVocabData(word) {
                     return `__YAY_RUBY_TOKEN_${rubyPlaceholders.length - 1}__`;
                 });
 
+                // Protect <button> elements to prevent UI corruption
+                const buttonPlaceholders = [];
+                contentHTML = contentHTML.replace(/<button[\s\S]*?<\/button>/gi, (match) => {
+                    buttonPlaceholders.push(match);
+                    return `__YAY_BUTTON_TOKEN_${buttonPlaceholders.length - 1}__`;
+                });
+
                 let converted = await kuroshiro.convert(contentHTML, { mode: "furigana", to: "hiragana" });
                 
                 // Restore protected tags
+                buttonPlaceholders.forEach((buttonOrigin, index) => {
+                    converted = converted.replace(`__YAY_BUTTON_TOKEN_${index}__`, buttonOrigin);
+                });
                 rubyPlaceholders.forEach((rubyOrigin, index) => {
                     converted = converted.replace(`__YAY_RUBY_TOKEN_${index}__`, rubyOrigin);
                 });

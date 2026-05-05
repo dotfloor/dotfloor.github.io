@@ -199,7 +199,6 @@ body.hide-furigana ruby {
 
 body.hide-furigana rt {
 	opacity: 0;
-	transition: opacity;
 }
 
 body.hide-furigana ruby.mobile-reveal rt {
@@ -214,6 +213,21 @@ body.hide-furigana ruby.mobile-reveal rt {
 
 body.hide-furigana .vocab-list-container rt {
 	opacity: 1;
+}
+
+/* Romaji specific styles */
+.paragraph-romaji {
+	display: block;
+	font-family: sans-serif;
+	font-size: 1em;
+	color: dimgray;
+	margin-top: 0.5rem;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+body.hide-romaji .paragraph-romaji {
+	display: none;
 }
 
 /* Dictionary Component */
