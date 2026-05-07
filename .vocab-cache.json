@@ -2005,5 +2005,150 @@
       "Godan verb with 'bu' ending",
       "Intransitive verb"
     ]
+  },
+  "間違い": {
+    "word": "間違い",
+    "reading": "まちがい",
+    "romaji": "machigai",
+    "jlpt": [
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "mistake; error; blunder",
+      "accident; mishap; trouble",
+      "improper conduct (e.g. between man and woman); indiscretion"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "鶏": {
+    "word": "鳥",
+    "reading": "とり",
+    "romaji": "tori",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "bird",
+      "bird meat (esp. chicken meat); fowl; poultry"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "鶏\n肉-": {
+    "word": "鳥",
+    "reading": "とり",
+    "romaji": "tori",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "bird",
+      "bird meat (esp. chicken meat); fowl; poultry"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "肉": {
+    "word": "肉",
+    "reading": "にく",
+    "romaji": "niku",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "flesh",
+      "meat",
+      "flesh (of a fruit); pulp",
+      "the physical body (as opposed to the spirit); flesh",
+      "thickness",
+      "content; substance; flesh",
+      "ink pad",
+      "Flesh"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "料理": {
+    "word": "料理",
+    "reading": "りょうり",
+    "romaji": "ryouri",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "cooking; cookery; cuisine; food; dish",
+      "dealing with (skillfully); handling (well); managing",
+      "Cuisine"
+    ],
+    "pos": [
+      "Noun",
+      "Suru verb",
+      "Transitive verb"
+    ]
+  },
+  "散歩": {
+    "word": "散歩",
+    "reading": "さんぽ",
+    "romaji": "sanpo",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "walk; stroll",
+      "Strolling"
+    ],
+    "pos": [
+      "Noun",
+      "Suru verb",
+      "Intransitive verb"
+    ]
+  },
+  "難しい": {
+    "word": "難しい",
+    "reading": "むずかしい",
+    "romaji": "muzukashii",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "difficult; hard; troublesome; complicated; serious (disease, problem, etc.)",
+      "impossible; unfeasible",
+      "fussy; particular; fastidious; hard to please; displeased",
+      "gloomy; glum; sullen; serious (look)",
+      "dirty; unclean; filthy; detestable",
+      "unpleasant; uncomfortable; creepy; spooky"
+    ],
+    "pos": [
+      "I-adjective (keiyoushi)"
+    ]
+  },
+  "気分": {
+    "word": "気分",
+    "reading": "きぶん",
+    "romaji": "kibun",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "feeling; mood",
+      "Mood (psychology)"
+    ],
+    "pos": [
+      "Noun"
+    ]
   }
 }
