@@ -2150,5 +2150,166 @@
     "pos": [
       "Noun"
     ]
+  },
+  "豚": {
+    "word": "豚",
+    "reading": "ぶた",
+    "romaji": "buta",
+    "jlpt": [],
+    "is_common": true,
+    "meanings": [
+      "pig (Sus scrofa domesticus)",
+      "pork",
+      "fatso; fatty",
+      "Domestic pig"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "煮込み": {
+    "word": "煮込み",
+    "reading": "にこみ",
+    "romaji": "nikomi",
+    "jlpt": [],
+    "is_common": false,
+    "meanings": [
+      "stew; hodgepodge"
+    ],
+    "pos": [
+      "Noun"
+    ]
+  },
+  "作り": {
+    "word": "作り",
+    "reading": "つくり",
+    "romaji": "tsukuri",
+    "jlpt": [
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "making; producing; manufacturing; building; construction; make; structure",
+      "appearance (attire, make-up, etc.)",
+      "build; physique",
+      "sashimi",
+      "forced (smile, etc.)"
+    ],
+    "pos": [
+      "Noun",
+      "Noun, used as a prefix"
+    ]
+  },
+  "作る": {
+    "word": "作る",
+    "reading": "つくる",
+    "romaji": "tsukuru",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n2",
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to make; to produce; to manufacture; to build; to construct",
+      "to prepare (food); to brew (alcohol)",
+      "to raise; to grow; to cultivate; to train",
+      "to till",
+      "to draw up (a document); to make out; to prepare; to write",
+      "to create (an artistic work, etc.); to compose",
+      "to coin (a phrase); to organize; to organise; to establish; to found",
+      "to have (a child)",
+      "to make up (one's face, etc.)",
+      "to fabricate (an excuse, etc.)",
+      "to give a (false) appearance; to feign (a smile, etc.); to put on a show of emotion",
+      "to form (a line, etc.)",
+      "to set (a record)",
+      "to commit (a sin, etc.)"
+    ],
+    "pos": [
+      "Godan verb with 'ru' ending",
+      "Transitive verb"
+    ]
+  },
+  "昨夜": {
+    "word": "昨夜",
+    "reading": "ゆうべ",
+    "romaji": "yuube",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3"
+    ],
+    "is_common": true,
+    "meanings": [
+      "last night; yesterday evening"
+    ],
+    "pos": [
+      "Noun",
+      "Adverb (fukushi)"
+    ]
+  },
+  "眠": {
+    "word": "眠る",
+    "reading": "ねむる",
+    "romaji": "nemuru",
+    "jlpt": [
+      "jlpt-n4"
+    ],
+    "is_common": true,
+    "meanings": [
+      "to sleep",
+      "to die; to rest (in peace); to lie (buried); to sleep (in the grave)",
+      "to lie idle (e.g. of resources); to lie unused; to lie untapped; to lie untouched",
+      "to close one's eyes"
+    ],
+    "pos": [
+      "Godan verb with 'ru' ending",
+      "Intransitive verb"
+    ]
+  },
+  "余り": {
+    "word": "余り",
+    "reading": "あまり",
+    "romaji": "amari",
+    "jlpt": [
+      "jlpt-n5",
+      "jlpt-n3",
+      "jlpt-n1"
+    ],
+    "is_common": true,
+    "meanings": [
+      "remainder; remnant; rest; balance; surplus; remains (of a meal); leftovers",
+      "(not) very; (not) much",
+      "too much; excessively; overly",
+      "extreme; great; severe; tremendous; terrible",
+      "not very good; so-so; mediocre",
+      "more than; over"
+    ],
+    "pos": [
+      "Noun",
+      "Noun which may take the genitive case particle 'no'",
+      "Adverb (fukushi)",
+      "Na-adjective (keiyodoshi)",
+      "Noun, used as a suffix"
+    ]
+  },
+  "卵": {
+    "word": "卵",
+    "reading": "たまご",
+    "romaji": "tamago",
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "is_common": true,
+    "meanings": [
+      "eggs; egg; spawn; roe",
+      "(hen's) egg",
+      "a ... in the making; future (lawyer, doctor, etc.); budding ...",
+      "beginning; origin; infancy",
+      "Egg (biology)"
+    ],
+    "pos": [
+      "Noun"
+    ]
   }
 }
